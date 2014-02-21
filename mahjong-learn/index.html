@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Author: Mathias Rodriguez -->
+<html data-ng-app="mahjong-learn-app">
+<head>
+<meta charset="ISO-8859-1">
+<title>Learn Mahjong</title>
+<link rel="stylesheet" href="app/css/tiles.css"/>
+<script>
+	function WorkerControllers($scope)  {
+		$scope.workers = [{name:'Pepe', city:'Montevideo', salary: 50},
+		                  {name:'Toto',city:'San José', salary: 41}, 
+		                  {name:'Lolo', city:'San José', salary: 38},
+		                  {name:'Nene', city:'Montevideo', salary: 39}];
+	}
+	function TilesControllers($scope)  {
+		$scope.tiles = [{type: 'bams', tiles: ['one','two']}];
+	}
+</script>
+</head>
+<body data-ng-init="names=[{name:'Pepe', city:'Montevideo', salary: 50},{name:'Toto',city:'San José', salary: 41}, {name:'Lolo', city:'San José', salary: 38},{name:'Nene', city:'Montevideo', salary: 39}]">
+	<div id="container">
+		Name: <input type="text" data-ng-model="name" />{{ name }}
+		<div class="people-container">
+			<ul>
+				<li data-ng-repeat="personName in names | filter:name | orderBy: 'city'">{{ (personName.name | lowercase) + ' - ' + personName.city + ' [' + ((personName.salary * 1000) | currency)+']' }}</li>
+			</ul>
+		</div>
+	</div>  
+	<div class="bams two"></div>	
+	<script type="text/javascript" src="app/js/angular.min.js"></script>
+</body>
+</html>

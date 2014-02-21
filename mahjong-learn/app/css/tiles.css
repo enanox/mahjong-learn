@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+/*
+ * @Author - Mathias Rodriguez
+ * @Year - 2014
+ */
+ 
+/*
+ * @name tiles.css 
+ * For tiles only
+ */
+ 
+ .bams {
+ 	background-image: url('../img/mahjong-tiles.png'); 	
+ 	border-radius: 2px;
+ }
+ .bams.one {
+ 	background-position: 490px 327px;	
+ 	width: 55px;
+ 	height: 83px;
+ }
+ .bams.two {
+ 	background-position: 437px 326px;
+ 	width: 55px;
+ 	height: 83px;
+ }
