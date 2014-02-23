@@ -9,8 +9,40 @@ angular.module('mahjongLearnAppApp', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+      })
+      .when('/welcome', {
+        templateUrl: 'views/welcome.html',
+        controller: 'WelcomeCtrl'
+      })
+      .when('/tiles', {
+        templateUrl: 'views/tiles.html',
+        controller: 'TilesCtrl'
+      })
+      .when('/start', {
+        templateUrl: 'views/start.html',
+        controller: 'StartCtrl'
+      })
+      .when('/yaku', {
+        templateUrl: 'views/yaku.html',
+        controller: 'YakuCtrl'
+      })
+      .when('/end', {
+        templateUrl: 'views/end.html',
+        controller: 'EndCtrl'
+      })
+      .when('/you', {
+        templateUrl: 'views/you.html',
+        controller: 'YouCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'

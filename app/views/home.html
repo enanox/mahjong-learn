@@ -1,0 +1,20 @@
+<header>
+	<div class="title">
+		<span>Welcome to Mahjong Learn!</span>
+	</div>
+</header>
+<article>
+	<nav>
+		<ul data-ng-init="options=[{text: 'Home', link: '/'},{text: 'About', link: '#/about'},{text:'Contact me!',link: '#/contact'}]">
+			<li data-ng-repeat="o in options"><a href="{{ o.link }}">{{ o.text}}</a></li>
+		</ul>
+	</nav>
+</article>
+<div class="before-footer">
+	<div class="continue">
+		<a href="#/welcome">Continue</a>
+	</div>
+</div>
+<footer>
+	
+</footer>
