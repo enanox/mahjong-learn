@@ -1,29 +1,29 @@
 {"texts": {
+	"menu": [
+		{"text": {
+			"en":"Home",
+			"es":"Inicio",
+			"link": "/"
+			}
+		},
+		{"text": {
+			"en":"About",
+			"es":"Acerca",
+			"link": "#/about"
+			}
+		},
+		{"text": {
+			"en":"Contact me!",
+			"es":"Contacto",
+			"link": "#/contact"
+			}
+		}
+	],
 	"Home": {
 		"title": {
 			"en":"Welcome to Mahjong Learn!",
 			"es":"Bienvenido a Mahjong Learn!"
-		},
-		"menu": [
-			{"text": {
-				"en":"Home",
-				"es":"Inicio",
-				"link": "/"
-				}
-			},
-			{"text": {
-				"en":"About",
-				"es":"Acerca",
-				"link": "#/about"
-				}
-			},
-			{"text": {
-				"en":"Contact me!",
-				"es":"Contacto",
-				"link": "#/contact"
-				}
-			}
-		],
+		},		
 		"questions": [
 			{"text": {
 				"en": "Have you always wanted to someone to tell you what was this stuff about?",
@@ -61,7 +61,15 @@
 			}
 		},
 	"Welcome": {
-		
+		"title": {
+				"en":"Welcome (again) to Mahjong Learn!",
+				"es":"Bienvenido (de nuevo) a Mahjong Learn!"
+			},
+		"continue": {
+			"en": "Continue",
+			"es": "Continuar",
+			"link": "#/welcome"
+			}
 		}
 	}
 }

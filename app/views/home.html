@@ -1,12 +1,16 @@
 <header>
+	<div class="logo">
+	
+	</div>
 	<div class="title">
-		<h1>{{ texts.title[language] }}</h1>
+		<h1>Mahjong Learn</h1>
 	</div>
 </header>
 <article>
+	<h1>{{ texts.title[language] }}</h1>
 	<nav>
 		<ul>
-			<li data-ng-repeat="o in texts.menu"><a href="{{ o.link }}" title="{{ o.text[language] }}">{{ o.text[language] }}</a></li>
+			<li data-ng-repeat="o in menu"><a href="{{ o.link }}" title="{{ o.text[language] }}">{{ o.text[language] }}</a></li>
 		</ul>
 	</nav>
 	<section>

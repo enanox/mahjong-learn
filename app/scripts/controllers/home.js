@@ -9,6 +9,7 @@ angular.module('mahjongLearnAppApp')
     ];
     
     $scope.texts = {};
+    $scope.menu = {};
     $scope.error;
     $scope.language = L10n.getBrowserLanguage();
     $scope.continueVisible = false;
@@ -17,6 +18,7 @@ angular.module('mahjongLearnAppApp')
     	L10n.loadTextsForView()
     		.success(function(staticTexts) {
 		  		$scope.texts = staticTexts.texts['Home'];
+		  		$scope.menu = staticTexts.texts.menu;
 		  	})
 		  	.error(function(error) {
 		  		$scope.error = 'Error loading texts ' + error.message;

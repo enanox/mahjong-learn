@@ -1,1 +1,25 @@
-<p>This is the welcome view.</p>
+<header>
+	<div class="logo">
+	
+	</div>
+	<div class="title">
+		<h1>Mahjong Learn</h1>
+	</div>
+</header>
+<article>
+	<h1>{{ texts.title[language] }}</h1>
+	<nav>
+		<ul>
+			<li data-ng-repeat="o in menu"><a href="{{ o.link }}" title="{{ o.text[language] }}">{{ o.text[language] }}</a></li>
+		</ul>
+	</nav>
+	
+</article>
+<div class="before-footer">
+	<div class="continue" data-ng-show="continueVisible">
+		<a href="{{ texts.continue.link }}">{{ texts.continue[language] }}</a>
+	</div>
+</div>
+<footer>
+	
+</footer>

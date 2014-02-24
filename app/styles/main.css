@@ -64,6 +64,10 @@ body {
 	background-size: 100%;
 	
 }
+div.title h1 {
+	font-size: 28px;
+	font-weight: bold;
+}
 div.home-questions {
 	padding: 20px 20px;
 	font-size: 19px;
@@ -84,7 +88,8 @@ div.home-legend {
 	margin-right: auto;
 }
 div.before-footer {
-	margin-top: 150px;
+	padding-top: 50px;
+	width: 50%;
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

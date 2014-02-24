@@ -11,13 +11,12 @@ angular.module('mahjongLearnAppApp')
 		  return $http.get('/static/texts.json');
 	  };
 	  
-	  this.getTextForView = function(view)  {
-		  var texts = {};
+	  this.getTextForView = function(view)  {		
 		  this.loadTextsForView()
 		  	.success(function(staticTexts) {
-		  		texts[view] = staticTexts;
+		  		var texts = staticTexts[view];
 		  		
-		  		return texts[view];
+		  		return texts;
 		  	});
 	  };
 	  
