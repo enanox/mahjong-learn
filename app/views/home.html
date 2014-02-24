@@ -1,18 +1,32 @@
 <header>
 	<div class="title">
-		<span>Welcome to Mahjong Learn!</span>
+		<h1>{{ texts.title[language] }}</h1>
 	</div>
 </header>
 <article>
 	<nav>
-		<ul data-ng-init="options=[{text: 'Home', link: '/'},{text: 'About', link: '#/about'},{text:'Contact me!',link: '#/contact'}]">
-			<li data-ng-repeat="o in options"><a href="{{ o.link }}">{{ o.text}}</a></li>
+		<ul>
+			<li data-ng-repeat="o in texts.menu"><a href="{{ o.link }}" title="{{ o.text[language] }}">{{ o.text[language] }}</a></li>
 		</ul>
 	</nav>
+	<section>
+		<div class="home-questions" data-ng-animate="hide" data-ng-repeat="q in texts.questions" data-ng-hide="visible">
+			{{ q.text[language] }}
+		</div>
+		<div class="home-before-legend" data-ng-show="visibleBefLegend" data-ng-animate="show">
+			{{ texts.beforeLegend[language]  }}
+		</div>
+		<div class="home-legend" data-ng-show="visibleLegend" data-ng-animate="show">
+			{{ texts.legend[language] }}
+		</div>
+	</section>
+	<section data-ng-social="">
+		
+	</section>
 </article>
 <div class="before-footer">
-	<div class="continue">
-		<a href="#/welcome">Continue</a>
+	<div class="continue" data-ng-show="continueVisible">
+		<a href="{{ texts.continue.link }}">{{ texts.continue[language] }}</a>
 	</div>
 </div>
 <footer>

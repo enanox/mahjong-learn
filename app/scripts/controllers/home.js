@@ -8,10 +8,40 @@ angular.module('mahjongLearnAppApp')
       'Karma'
     ];
     
-    $scope.showWelcomeMessage = function()  {
-    	console.log(L10n.getBrowserLanguage())
-    };
+    $scope.texts = {};
+    $scope.error;
+    $scope.language = L10n.getBrowserLanguage();
+    $scope.continueVisible = false;
     
+    function getTextsForHome()  {
+    	L10n.loadTextsForView()
+    		.success(function(staticTexts) {
+		  		$scope.texts = staticTexts.texts['Home'];
+		  	})
+		  	.error(function(error) {
+		  		$scope.error = 'Error loading texts ' + error.message;
+		  	});
+    }
     
+    getTextsForHome();
+   
+    function init() {
+    	setInterval(function() {
+	    	setTimeout(function() {
+	    		$scope.visible = !$scope.visible;
+	    		$scope.$apply();
+	    		
+	    		showLegends();
+	    	},4000);
+    	}, 10000);
+    }
     
+    function showLegends()  {
+    	$scope.visibleBefLegend = !$scope.visibleBefLegend;
+    	$scope.visibleLegend = !$scope.visibleLegend;
+    	$scope.continueVisible = true;
+    	$scope.$apply();
+    }
+    
+    init();
   });

@@ -1,0 +1,67 @@
+{"texts": {
+	"Home": {
+		"title": {
+			"en":"Welcome to Mahjong Learn!",
+			"es":"Bienvenido a Mahjong Learn!"
+		},
+		"menu": [
+			{"text": {
+				"en":"Home",
+				"es":"Inicio",
+				"link": "/"
+				}
+			},
+			{"text": {
+				"en":"About",
+				"es":"Acerca",
+				"link": "#/about"
+				}
+			},
+			{"text": {
+				"en":"Contact me!",
+				"es":"Contacto",
+				"link": "#/contact"
+				}
+			}
+		],
+		"questions": [
+			{"text": {
+				"en": "Have you always wanted to someone to tell you what was this stuff about?",
+				"es": "¿Deseaste alguna vez que alguien te contara de qué se trata esto?"
+				}
+			},
+			{"text": {
+				"en": "Mahjong... Is it like Chinese cards?",
+				"es": "Mahjong... ¿Es una clase de cartas chinas?"
+				}
+			},
+			{"text": {
+				"en": "Do you want to learn to play Mahjong?",
+				"es": "¿Quieres aprender a jugar Mahjong?"
+				}
+			},
+			{"text": {
+				"en": "Do you have friends interested in playing Mahjong but you don't have the time to teach them?",
+				"es": "¿Tienes amigos interesados en jugar Mahjong pero no tienes el tiempo de enseñarles?"
+				}
+			}
+		],
+		"beforeLegend": {
+			"en": "If you can answer \"Yes\" to any of this questions...",
+			"es": "Si puedes responder \"Sí\" a cualquiera de estas preguntas..."
+			},
+		"legend": {
+			"en": "I hope this site suits you!",
+			"es": "¿Espero que este sitio sea para ti!"
+			},
+		"continue": {
+			"en": "Continue",
+			"es": "Continuar",
+			"link": "#/welcome"
+			}
+		},
+	"Welcome": {
+		
+		}
+	}
+}
