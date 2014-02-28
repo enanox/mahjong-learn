@@ -9,9 +9,7 @@ angular.module('mahjongLearnAppApp')
     ];
     
     $scope.language = L10n.getBrowserLanguage();
-    $scope.texts = {};
-    $scope.menu = {};
-    $scope.error;
+    $scope.visible = false;
     
     function getTextsForWelcome()  {
     	L10n.loadTextsForView()
@@ -25,4 +23,11 @@ angular.module('mahjongLearnAppApp')
     }
     
     getTextsForWelcome();
+    
+    setTimeout(function() {
+    	$scope.visible = true;
+    	$scope.continueVisible = true;
+    	$scope.$apply();
+    }, 1500);
+    
   });

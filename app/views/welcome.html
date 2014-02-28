@@ -3,11 +3,11 @@
 	<h1>{{ texts.title[language] }}</h1>
 	<div data-mahjong-menu></div>
 	<section>
-		<div class="legend-texts" data-ng-repeat="l in legendTexts">
-			<span>{{ l.text }}</span>
+		<div class="legend-texts" data-ng-repeat="l in texts.legendTexts" data-ng-animate="'animate'">
+			<span>{{ l.text[language] }}</span>
 		</div>
-		<div class="history-texts" data-ng-repeat="h in historyTexts">
-			<span>{{ h.text }}</span>
+		<div class="history-texts" data-ng-repeat="h in texts.historyTexts" data-ng-show="visible" data-mahjong-complement-image>
+			<span data-ng-transclude></span>
 		</div>
 	</section>
 </article>

@@ -68,8 +68,34 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/welcome"
-			}
+			"link": "#/table"
+			},		
+		"legendTexts": [
+			{"text": {
+				"en": "Welcome to our practical web tutorial for learning the antique art of strategy and random chance of Mahjong. We intend that in the following pages you could play a full round and teach you how to form different combinations to beat over your friends!",
+				"es": "Bienvenido a nuestro tutorial web práctico para aprender el antiguo arte de estrategia y azar del Mahjong. Nuestra intención es que en las siguientes páginas puedas jugar una ronda completa y enseñarte como formar diferentes combinaciones para derrotar a tus amigos!",
+				"decoration": ""
+				}
+			},
+			{"text": {
+				"en": "We will focus in the ruling of the Japanese Riichi Mahjong",
+				"es": "Nos vamos a centrar en las reglas del Mahjong japonés Riichi",
+				"decoration": ""
+				}
+			}],
+		"historyTexts": [
+			{"text": {
+				"en": "Mahjong, a game that originated in China, is commonly played by four players (with some three-player variations found in Korea and Japan). The game and its regional variants are widely played throughout Eastern and South Eastern Asia and have a small following in Western countries. Similar to the Western card game rummy, mahjong is a game of skill, strategy, and calculation and involves a degree of chance. ",
+				"es": "El mahjong, mah jong o mah-jongg, es un juego de mesa de origen chino, exportado al resto del mundo, y particularmente a Occidente, a partir de 1920. En chino también se le conoce como gorrión. El juego guarda cierta similitud con el Rummy, ya que su objetivo es formar grupos de fichas, como escaleras de números consecutivos de un mismo palo o bien tres o cuatro fichas iguales. Aunque las reglas para jugar son casi siempre las mismas, existen diferentes variantes. La principal diferencia entre ellas radica en qué jugadas puntúan y cuál su valor. ",
+				"decoration": ""
+				}
+			},
+			{"text": {
+				"en": "The game is played with a set of 144 tiles based on Chinese characters and symbols, although some regional variations use a different number of tiles. In most variations, each player begins by receiving 13 tiles. In turn players draw and discard tiles until they complete a legal hand using the 14th drawn tile to form four groups (melds) and a pair (head). There are fairly standard rules about how a piece is drawn, stolen from another player and thus melded, the use of simples (numbered tiles) and honours (winds and dragons), the kinds of melds, and the order of dealing and play. However there are many regional variations in the rules; in addition, the scoring system and the minimum hand necessary to win varies significantly based on the local rules being used.",
+				"es": "Su antecesor recibía el nombre de «juego de hojas en tiras», ya que las fichas eran de cartulina, como los naipes actuales. Progresivamente se abandonó este material y se empezaron a fabricar fichas de marfil, madera y, sobre todo, bambú, aunque actualmente lo normal es utilizar el plástico, más duradero y barato. No obstante, se siguen fabricando, como se hizo en la antigüedad, verdaderas obras de arte en distintos materiales.",
+				"decoration": "images/origin.png"
+				}
+			}]
 		},
 	"": {
 		}

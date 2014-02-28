@@ -16,6 +16,10 @@ angular.module('mahjongLearnAppApp', [
         templateUrl: 'views/welcome.html',
         controller: 'WelcomeCtrl'
       })
+      .when('/table', {
+        templateUrl: 'views/table.html',
+        controller: 'TableCtrl'
+      })
       .when('/tiles', {
         templateUrl: 'views/tiles.html',
         controller: 'TilesCtrl'
