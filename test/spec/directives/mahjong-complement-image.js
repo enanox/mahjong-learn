@@ -13,8 +13,10 @@ describe('Directive: mahjongComplementImage', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<mahjong-complement-image></mahjong-complement-image>');
+    element = angular.element('<div mahjong-complement-image></div>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the mahjongComplementImage directive');
+    
+    expect(element.children().length).toBe(2);
+    expect(element.children().find('span:first').text()).toBe('');
   }));
 });

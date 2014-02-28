@@ -13,8 +13,9 @@ describe('Directive: mahjongMenu', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<mahjong-menu></mahjong-menu>');
+    element = angular.element('<div mahjong-menu></div>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the mahjongMenu directive');
+    
+    expect(element.find('nav').attr('class')).toBe('menu');
   }));
 });

@@ -8,7 +8,7 @@ angular.module('mahjongLearnAppApp')
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
         //element.text('this is the mahjongComplementImage directive');
-    	  var decor = scope.h.text.decoration;
+    	  var decor = (scope.h ? scope.h.text.decoration : '');
     	  
     	  if(decor != '')  {    
     		  var img = element.find('span:first');

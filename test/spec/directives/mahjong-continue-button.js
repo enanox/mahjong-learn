@@ -13,8 +13,8 @@ describe('Directive: mahjongContinueButton', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<mahjong-continue-button></mahjong-continue-button>');
+    element = angular.element('<div mahjong-continue-button></div>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the mahjongContinueButton directive');
+    expect(element.children().children().children().text()).toBe('{{ texts.continue[language] }}');
   }));
 });
