@@ -1,18 +1,7 @@
-<header>
-	<div class="logo">
-	
-	</div>
-	<div class="title">
-		<h1>Mahjong Learn</h1>
-	</div>
-</header>
+<header data-mahjong-title></header>
 <article>
 	<h1>{{ texts.title[language] }}</h1>
-	<nav>
-		<ul>
-			<li data-ng-repeat="o in menu"><a href="{{ o.link }}" title="{{ o.text[language] }}">{{ o.text[language] }}</a></li>
-		</ul>
-	</nav>
+	<div data-mahjong-menu></div>
 	<section>
 		<div class="home-questions" data-ng-animate="hide" data-ng-repeat="q in texts.questions" data-ng-hide="visible">
 			{{ q.text[language] }}
@@ -28,11 +17,7 @@
 		
 	</section>
 </article>
-<div class="before-footer">
-	<div class="continue" data-ng-show="continueVisible">
-		<a href="{{ texts.continue.link }}">{{ texts.continue[language] }}</a>
-	</div>
-</div>
+<div data-mahjong-continue-button></div>
 <footer>
 	
 </footer>
