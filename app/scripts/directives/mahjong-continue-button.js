@@ -9,6 +9,7 @@ angular.module('mahjongLearnAppApp')
     			'</div>'+
     			'</div>',
       restrict: 'A',
+      replace: true,
       link: function postLink(scope, element, attrs) {
         //element.text('this is the mahjongContinueButton directive');
       }

@@ -98,7 +98,8 @@ div.history-texts {
 	padding: 30px 0px;
 }
 
-div.history-texts span.decoration {
+div.history-texts span.decoration,
+div.equipment-texts span.decoration {
 	float: left;
 	margin-right: 10px;
 	display: inline-block;

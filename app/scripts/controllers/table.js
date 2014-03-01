@@ -9,7 +9,7 @@ angular.module('mahjongLearnAppApp')
     ];
     
     $scope.language = L10n.getBrowserLanguage();
-    $scope.continueVisible = false;
+    $scope.continueVisible = true;
     
     function getTextsForTable()  {
     	L10n.loadTextsForView()

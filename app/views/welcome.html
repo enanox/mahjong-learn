@@ -1,12 +1,13 @@
 <header data-mahjong-title></header>
 <article>
-	<h1>{{ texts.title[language] }}</h1>
 	<div data-mahjong-menu></div>
+	<h1>{{ texts.title[language] }}</h1>
+	
 	<section>
 		<div class="legend-texts" data-ng-repeat="l in texts.legendTexts" data-ng-animate="'animate'">
 			<span>{{ l.text[language] }}</span>
 		</div>
-		<div class="history-texts" data-ng-repeat="h in texts.historyTexts" data-ng-show="visible" data-mahjong-complement-image>
+		<div class="history-texts" data-ng-repeat="h in texts.historyTexts" data-ng-show="visible" data-mahjong-complement-image data-localized="h.text">
 			<span data-ng-transclude></span>
 		</div>
 	</section>

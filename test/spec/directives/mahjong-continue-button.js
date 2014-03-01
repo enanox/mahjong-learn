@@ -15,6 +15,6 @@ describe('Directive: mahjongContinueButton', function () {
   it('should make hidden element visible', inject(function ($compile) {
     element = angular.element('<div mahjong-continue-button></div>');
     element = $compile(element)(scope);
-    expect(element.children().children().children().text()).toBe('{{ texts.continue[language] }}');
+    expect(element.children().children().text()).toBe('{{ texts.continue[language] }}');
   }));
 });

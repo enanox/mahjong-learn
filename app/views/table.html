@@ -1,6 +1,13 @@
 <header data-mahjong-title></header>
 <article>
+	<div data-mahjong-menu></div>
 	<h1>{{ texts.title[language] }}</h1>
+	<div class="table-equipment">
+		<h2>{{ texts.equipmentTitle[language] }}</h2>
+		<div class="equipment-texts" data-ng-repeat="e in texts.equipment" data-mahjong-complement-image data-localized="e.text">
+			<span data-ng-transclude></span>
+		</div>
+	</div>
 </article>
 <div data-mahjong-continue-button></div>
 <footer>

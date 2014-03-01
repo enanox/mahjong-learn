@@ -105,8 +105,25 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/table"
-			}
+			"link": "#/start"
+			},
+		"equipmentTitle": {
+			"en": "Equipment",
+			"es": "Equipamiento y materiales"
+			},
+		"equipment": [
+			{"text": {
+				"en": "First of all, you will need a specific mahjong tile set (though cards can be used).",
+				"es": "Primero, necesitarás un juego específico de fichas de mahjong (cartas pueden ser utilizadas).",
+				"decoration": "images/tiles-dropped.jpg"
+				}
+			},
+			{"text": {
+				"en": "",
+				"es": "",
+				"decoration": ""
+				}
+			}]
 		}
 	}
 }

@@ -16,6 +16,6 @@ describe('Directive: mahjongMenu', function () {
     element = angular.element('<div mahjong-menu></div>');
     element = $compile(element)(scope);
     
-    expect(element.find('nav').attr('class')).toBe('menu');
+    expect(element.attr('class')).toBe('menu ng-scope');
   }));
 });
