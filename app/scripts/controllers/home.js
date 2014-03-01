@@ -8,9 +8,6 @@ angular.module('mahjongLearnAppApp')
       'Karma'
     ];
     
-    $scope.texts = {};
-    $scope.menu = {};
-    $scope.error;
     $scope.language = L10n.getBrowserLanguage();
     $scope.continueVisible = false;
     

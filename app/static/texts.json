@@ -97,7 +97,16 @@
 				}
 			}]
 		},
-	"": {
+	"Table": {
+		"title": {
+				"en":"The game table",
+				"es":"La mesa de juego"
+			},
+		"continue": {
+			"en": "Continue",
+			"es": "Continuar",
+			"link": "#/table"
+			}
 		}
 	}
 }
