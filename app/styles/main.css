@@ -97,6 +97,11 @@ div.legend-texts {
 div.history-texts {
 	padding: 30px 0px;
 }
+div.equipment-texts  {
+	display: block;
+	padding: 20px 0px;
+	float: left;
+} 
 
 div.history-texts span.decoration,
 div.equipment-texts span.decoration {
@@ -108,6 +113,13 @@ div.equipment-texts span.decoration {
 	border-radius: 5px;
 	background-size: 100% auto;
 	background-repeat: no-repeat
+}
+
+span.centered {
+	display: inline-block;
+	height: 139px;
+	width: 50%;
+	padding-top: 30px;
 }
 
 .animate-enter, 

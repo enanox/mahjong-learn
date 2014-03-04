@@ -11,12 +11,15 @@ angular.module('mahjongLearnAppApp')
         //element.text('this is the mahjongComplementImage directive');
     	  var decor = (scope.localized ? scope.localized.decoration : '');
     	  var language = L10n.getBrowserLanguage();
-    	  console.log(scope.localized)
+    	  var textElement = element.find('span:last');
+    		  
+          textElement.text(scope.localized[language]);
+          
     	  if(decor != '')  {    
     		  var img = element.find('span:first');
     		  img.addClass('decoration').css({"background-image":"url("+decor+")"});
-    		  element.find('span:last').text(scope.localized[language]);    		  
-    	  }
+    		  textElement.addClass('centered');
+    	  }  	  
       }
     };
   });

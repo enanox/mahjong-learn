@@ -98,7 +98,15 @@
 			}]
 		},
 	"Table": {
-		"title": {
+		"titlePlayers": {
+			"en": "Players",
+			"es": "Jugadores"
+			},
+		"playersLegend": {
+			"en": "This rule set works for 4 players",
+			"es": "Estas reglas son adecuadas para 4 jugadores."
+			},
+		"titleTable": {
 				"en":"The game table",
 				"es":"La mesa de juego"
 			},
@@ -119,8 +127,14 @@
 				}
 			},
 			{"text": {
-				"en": "",
-				"es": "",
+				"en": "It's not mandatory (although it would be great) to have tile racks for each player, to set the tiles as you want to.",
+				"es": "Es opcional (aunque sería genial) tener atriles para las fichas de cada jugador, para poder ubicarlas cómodamente.",
+				"decoration": "images/tiles-racks.jpg"
+				}
+			},
+			{"text": {
+				"en": "A square or round table, like the one we have in the background.",
+				"es": "Una mesa redonda o cuadrada, como la que tenemos al fondo.",
 				"decoration": ""
 				}
 			}]
