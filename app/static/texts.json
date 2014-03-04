@@ -137,6 +137,24 @@
 				"es": "Una mesa redonda o cuadrada, como la que tenemos al fondo.",
 				"decoration": ""
 				}
+			},
+			{"text": {
+				"en": "Dice.",
+				"es": "Dos dados.",
+				"decoration": "images/tables-dice.jpg"
+				}
+			},
+			{"text": {
+				"en": "Any kind of counters to keep track of the score.",
+				"es": "Cualquier tipo de ficha para llevar los puntajes.",
+				"decoration": "images/counters.jpg"
+				}
+			},
+			{"text": {
+				"en": "Indicators or markers for showing who is dealer and which round is being played. The rounds (and seats) are names after four honours called winds. The order of the winds are East, South, West and North. ",
+				"es": "Indicadores o marcadores para mostrar quien reparte y qué ronda se está jugando. Las rondas (y asientos) son denominadas con cuatro honores llamados vientos. El orden de los vientos es Este, Sur, Oeste y Norte.",
+				"decoration": "images/round-winds.png"
+				}
 			}]
 		}
 	}

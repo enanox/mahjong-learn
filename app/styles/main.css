@@ -101,6 +101,7 @@ div.equipment-texts  {
 	display: block;
 	padding: 20px 0px;
 	float: left;
+	width: 100%;
 } 
 
 div.history-texts span.decoration,
