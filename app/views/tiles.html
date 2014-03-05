@@ -15,7 +15,7 @@
 				<ul>
 					<li data-ng-repeat="piece in suit.pieces" 
 					    data-ng-class="{isDora: piece.attr.dora, isTerminal: piece.attr.terminal}" 
-					    data-mahjong-tile data-tile="{{piece.name}}" data-show-name="true" data-size="small">
+					    data-mahjong-tile data-tile="{{piece.name}}" data-show-name="true" data-size="large">
 					    {{ piece.name[language] }}
 					</li>
 				</ul>
@@ -38,7 +38,7 @@
 				<ul>
 					<li data-ng-repeat="piece in honor.pieces"
 						data-ng-class="{isWind: piece.attr.wind, isDragon: piece.attr.dragon}"
-						data-mahjong-tile data-tile="{{piece.name}}" data-show-name="true" data-size="small">
+						data-mahjong-tile data-tile="{{piece.name}}" data-show-name="true" data-size="large">
 						{{ piece.name[language] }}
 					</li>
 				</ul>

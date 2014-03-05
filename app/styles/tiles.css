@@ -1,149 +1,167 @@
 @CHARSET "ISO-8859-1";
 
 span.small {
+	background-image: url(../images/tiles.jpg);
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 20px;
+	height: 27.3px;
+	border-radius: 2.3px;
+	background-size: 336px 336px;
+}
+span.medium {
+	background-image: url(../images/tiles.jpg);
+	background-repeat: no-repeat;	
+	display: inline-block;
+	width: 30px;
+	height: 41px;
+	border-radius: 3.5px;
+	background-size: 505px 505px;
+}
+span.large {
+	background-image: url(../images/tiles.jpg);
+	background-repeat: no-repeat;	
 	display: inline-block;
 	width: 60px;
 	height: 82px;
 	border-radius: 7px;
-}
-span.bam {	
-	background: url(../images/tiles.jpg) -144px -340px no-repeat;
 	background-size: auto auto;
-	
 }
-	.bam.one {
-		background-position: -144px -340px;
-	}
-	.bam.two {
-		background-position: -204px -340px;	
-	}
-	.bam.three {
-		background-position: -264px -340px;
-	}
-	.bam.four {
-		background-position: -325px -340px;
-	}
-	.bam.five {
-		background-position: -385px -340px;
-		width: 61px;
-	}
-	.isDora > .bam.five {
-		background-position: -809px -836px;
-		width: 60px;
-		/* height: 84px; */
-	}
+
+span.bam {	}
+span.bam.large { background-position-y: -340px; }
+span.bam.medium { background-position-y: -170px; }
+span.bam.small { background-position-y: -113.3px; }	
+	.bam.large.one { background-position-x: -144px; }
+	.bam.medium.one { background-position-x: -72px; }
+	.bam.small.one { background-position-x: -48px; }
+	
+	.bam.two { background-position-x: -204px; }
+	.bam.three { background-position-x: -264px; }
+	.bam.four { background-position-x: -325px; }
+	.bam.five { background-position-x: -385px; width: 61px; }
+	.isDora > .bam.five { background-position-x: -809px; background-position-y: -836px; width: 60px; }
 	.bam.six {
-		background-position: -445px -340px;
+		background-position-x: -445px;
 		width: 61px;
 	}
 	.bam.seven {
-		background-position: -506px -340px;
+		background-position-x: -506px -340px;
 		width: 61px;
 	}
 	.bam.eight {
-		background-position: -567px -340px;
+		background-position-x: -567px -340px;
 		width: 61px;
 	}
 	.bam.nine {
-		background-position: -627px -340px;
+		background-position-x: -627px -340px;
 		width: 60px;
 	}
-span.circle {		
-	background: url(../images/tiles.jpg) -144px -10px no-repeat;
-	background-size: auto auto;
-}
-	.circle.one {
-		background-position: -144px -10px;
-	}
+
+span.circle { }
+span.circle.large { background-position-y: -10px}
+span.circle.medium { background-position-y: -5px; }
+span.circle.small { background-position-y: -3.3px; }
+	.circle.large.one { background-position-x: -144px; }
+	.circle.medium.one { background-position-x: -72px; }
+	.circle.small.one { background-position-x: -48px; }
+	
 	.circle.two {
-		background-position: -204px -10px;
+		background-position-x: -204px -10px;
 	}
 	.circle.three {
-		background-position: -264px -10px;
+		background-position-x: -264px -10px;
 	}
 	.circle.four {
-		background-position: -324px -10px;
+		background-position-x: -324px -10px;
 	}
 	.circle.five {
-		background-position: -385px -10px;
+		background-position-x: -385px -10px;
 	}
 	.isDora > .circle.five {
-		background-position: -807px -670px;
+		background-position-x: -807px -670px;
 	}
 	.circle.six {
-		background-position: -446px -10px;
+		background-position-x: -446px -10px;
 	}
 	.circle.seven {
-		background-position: -506px -10px;
+		background-position-x: -506px -10px;
 	}
 	.circle.eight {
-		background-position: -566px -10px;
+		background-position-x: -566px -10px;
 	}
 	.circle.nine {
-		background-position: -626px -10px;
+		background-position-x: -626px -10px;
 	}
-span.char {	
-	background: url(../images/tiles.jpg) -146px -670px no-repeat;
-	background-size: auto auto;
-}
-	.char.one {
-		background-position: -146px -670px;
-	}
+
+span.char {	}
+span.char.large { background-position-y: -670px; }
+span.char.medium { background-position-y: -335px; }
+span.char.small { background-position-y: -223.3px; }
+	.char.large.one { background-position-x: -146px; }
+	.char.medium.one { background-position-x: -73px; }
+	.char.small.one { background-position-x: -48.6px; }
+	
 	.char.two {
-		background-position: -206px -670px;
+		background-position-x: -206px -670px;
 	}
 	.char.three {
-		background-position: -266px -670px;
+		background-position-x: -266px -670px;
 	}
 	.char.four {
-		background-position: -326px -670px;
+		background-position-x: -326px -670px;
 	}
 	.isDora > .char.five {
-		background-position: -808px -918px;
+		background-position-x: -808px -918px;
 	}
 	.char.five {
-		background-position: -386px -670px;
+		background-position-x: -386px -670px;
 	}
 	.char.six {
-		background-position: -447px -670px;
+		background-position-x: -447px -670px;
 	}
 	.char.seven {
-		background-position: -507px -670px;
+		background-position-x: -507px -670px;
 	}
 	.char.eight {
-		background-position: -567px -670px;
+		background-position-x: -567px -670px;
 	}
 	.char.nine {
-		background-position: -627px -670px;
+		background-position-x: -627px -670px;
 	}
-span.honor {	
-	background: url(../images/tiles.jpg) -687px -10px no-repeat;
-	background-size: auto auto;
-	height: 84px;
-}
-	.honor.red-dragon {
-		background-position: -687px -11px;
-	}
-	.honor.green-dragon {
-		background-position: -747px -11px;
-	}
-	.honor.white-dragon {
-		background-position: -807px -11px;
-	}
-span.wind {	
-	background: url(../images/tiles.jpg) -144px -10px no-repeat;
-	background-size: auto auto;
-	height: 83px;
-}
-	.wind.east-wind {
-		background-position: -685px -341px;
-	}
-	.wind.south-wind {
-		background-position: -745px -340px;
-	}
-	.wind.west-wind {
-		background-position: -686px -671px;
-	}
-	.wind.north-wind {
-		background-position: -747px -671px;
-	}
+
+span.honor { }
+span.honor.large { height: 84px; background-position-y: -11px; }
+span.honor.medium { height: 42px; background-position-y: -5.5px }
+span.honor.small { height: 28px; background-position-y: -3.6px; }	
+	.honor.large.red-dragon { background-position-x: -687px; }
+	.honor.medium.red-dragon { background-position-x: -343.5px; }
+	.honor.small.red-dragon { background-position-x: -229px; }
+	
+	.honor.large.green-dragon { background-position-x: -747px; }
+	.honor.medium.green-dragon { background-position-x: -373.5px; }
+	.honor.small.green-dragon { background-position-x: -249px; }
+	
+	.honor.large.white-dragon { background-position-x: -807px; }
+	.honor.medium.white-dragon { background-position-x: -403.5px; }
+	.honor.small.white-dragon { background-position-x: -269px; }
+
+span.wind {	}
+span.wind.large { height: 83px; background-position-y: -341px; }
+span.wind.medium { height: 41.5px; background-position-y: -170.5px; }
+span.wind.small { height: 27.6px; background-position-y: -113.6px; }
+	.wind.large.east-wind { background-position-x: -685px; }
+	.wind.medium.east-wind { background-position-x: -342.5px; }
+	.wind.small.east-wind { background-position-x: -228.3px; }
+	
+	.wind.large.south-wind { background-position-x: -745px; }
+	.wind.medium.south-wind { background-position-x: -372.5px; }
+	.wind.small.south-wind { background-position-x: -248.3px; }
+	
+	.wind.large.west-wind { background-position-x: -686px; }
+	.wind.medium.west-wind { background-position-x: -343px; }
+	.wind.small.west-wind { background-position-x: -228.6px; }
+	
+	.wind.large.north-wind { background-position-x: -747px; }
+	.wind.medium.north-wind { background-position-x: -373.5px; }
+	.wind.small.north-wind { background-position-x: -249px; }

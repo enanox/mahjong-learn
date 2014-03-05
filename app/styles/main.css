@@ -209,10 +209,18 @@ div.tiles-ordered {
 				display: inline;
 				float: left;
 			}
-			.honor-pieces li.isDragon  { width: 33%; }
+			.honor-pieces ul li span:first-child {
+				float: left;
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+			.honor-pieces li.isDragon  { width: 33%; text-align: center;  }
 				.isDragon:nth-child(2) { text-align: center; }
 				.isDragon:last-child   { text-align: right; }
-			.honor-pieces li.isWind  { width: 25%; }
+			.honor-pieces li.isWind  { width: 25%; text-align: center; }
 				.isWind:nth-child(2),
 				.isWind:nth-child(3) { text-align: center; }
 				.isWind:last-child   { text-align: right }
