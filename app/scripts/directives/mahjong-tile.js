@@ -22,6 +22,19 @@ angular.module('mahjongLearnAppApp')
     	var dragonClasses = {"R": "red-dragon", "G": "green-dragon", "W": "white-dragon"};
     	var windClasses = {"E": "east-wind", "S": "south-wind", "W": "west-wind", "N": "north-wind"};
     	
+    	tileDesignSpan.addClass(suitClasses[tile.suit]);
+    	
+    	switch(tile.suit)  {
+    	case 'H':
+    		tileDesignSpan.addClass(dragonClasses[tile.value]);
+    		break;
+    	case 'W':
+    		tileDesignSpan.addClass(windClasses[tile.value]);
+    		break;
+    	default: 
+    		tileDesignSpan.addClass(tile.en);
+    		break;
+    	}
     	
     	element.append(tileDesignSpan);    	
       }

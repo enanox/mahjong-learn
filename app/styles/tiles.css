@@ -1,0 +1,149 @@
+@CHARSET "ISO-8859-1";
+
+span.small {
+	display: inline-block;
+	width: 60px;
+	height: 82px;
+	border-radius: 7px;
+}
+span.bam {	
+	background: url(../images/tiles.jpg) -144px -340px no-repeat;
+	background-size: auto auto;
+	
+}
+	.bam.one {
+		background-position: -144px -340px;
+	}
+	.bam.two {
+		background-position: -204px -340px;	
+	}
+	.bam.three {
+		background-position: -264px -340px;
+	}
+	.bam.four {
+		background-position: -325px -340px;
+	}
+	.bam.five {
+		background-position: -385px -340px;
+		width: 61px;
+	}
+	.isDora > .bam.five {
+		background-position: -809px -836px;
+		width: 60px;
+		/* height: 84px; */
+	}
+	.bam.six {
+		background-position: -445px -340px;
+		width: 61px;
+	}
+	.bam.seven {
+		background-position: -506px -340px;
+		width: 61px;
+	}
+	.bam.eight {
+		background-position: -567px -340px;
+		width: 61px;
+	}
+	.bam.nine {
+		background-position: -627px -340px;
+		width: 60px;
+	}
+span.circle {		
+	background: url(../images/tiles.jpg) -144px -10px no-repeat;
+	background-size: auto auto;
+}
+	.circle.one {
+		background-position: -144px -10px;
+	}
+	.circle.two {
+		background-position: -204px -10px;
+	}
+	.circle.three {
+		background-position: -264px -10px;
+	}
+	.circle.four {
+		background-position: -324px -10px;
+	}
+	.circle.five {
+		background-position: -385px -10px;
+	}
+	.isDora > .circle.five {
+		background-position: -807px -670px;
+	}
+	.circle.six {
+		background-position: -446px -10px;
+	}
+	.circle.seven {
+		background-position: -506px -10px;
+	}
+	.circle.eight {
+		background-position: -566px -10px;
+	}
+	.circle.nine {
+		background-position: -626px -10px;
+	}
+span.char {	
+	background: url(../images/tiles.jpg) -146px -670px no-repeat;
+	background-size: auto auto;
+}
+	.char.one {
+		background-position: -146px -670px;
+	}
+	.char.two {
+		background-position: -206px -670px;
+	}
+	.char.three {
+		background-position: -266px -670px;
+	}
+	.char.four {
+		background-position: -326px -670px;
+	}
+	.isDora > .char.five {
+		background-position: -808px -918px;
+	}
+	.char.five {
+		background-position: -386px -670px;
+	}
+	.char.six {
+		background-position: -447px -670px;
+	}
+	.char.seven {
+		background-position: -507px -670px;
+	}
+	.char.eight {
+		background-position: -567px -670px;
+	}
+	.char.nine {
+		background-position: -627px -670px;
+	}
+span.honor {	
+	background: url(../images/tiles.jpg) -687px -10px no-repeat;
+	background-size: auto auto;
+	height: 84px;
+}
+	.honor.red-dragon {
+		background-position: -687px -11px;
+	}
+	.honor.green-dragon {
+		background-position: -747px -11px;
+	}
+	.honor.white-dragon {
+		background-position: -807px -11px;
+	}
+span.wind {	
+	background: url(../images/tiles.jpg) -144px -10px no-repeat;
+	background-size: auto auto;
+	height: 83px;
+}
+	.wind.east-wind {
+		background-position: -685px -341px;
+	}
+	.wind.south-wind {
+		background-position: -745px -340px;
+	}
+	.wind.west-wind {
+		background-position: -686px -671px;
+	}
+	.wind.north-wind {
+		background-position: -747px -671px;
+	}

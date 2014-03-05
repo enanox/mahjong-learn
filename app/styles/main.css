@@ -129,7 +129,7 @@ div.history-texts span.centered {
 
 /* === Tiles Page === */
 div.tiles-description {
-	
+	float: left;
 }
 	.tiles-description span.text-only {
 		margin: 5px 0px;
@@ -142,8 +142,13 @@ div.tiles-ordered {
 	.tiles-ordered div.suits {
 		display: block;
 		float: left; 
-		width: 30%;
 		margin: 0px 10px;
+	}
+	.suits.horizontal {
+		width: 100%;
+	}
+	.suits.vertical {
+		width: 30%;
 	}
 		.suits div.suit-name {
 			float: left;
@@ -154,10 +159,22 @@ div.tiles-ordered {
 			.suit-pieces ul {
 				padding: 0px 5px;
 			}
+			.horizontal > .suit-pieces ul li {
+				float: left;
+			}
 			.suit-pieces ul li {
 				list-style-type: none;
-				margin: 0;
+				margin: 4px 0px;
 				padding: 0;
+				text-align: center;
+			}
+			.suit-pieces ul li span:first-child {
+				float: left;
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: 700;
 			}
 	.tiles-ordered div.suits-additional {
 		float: left;
@@ -170,6 +187,7 @@ div.tiles-ordered {
 		margin: 10px 0px;
 		padding: 10px 0px;
 		display: block;
+		float: left;
 	}
 		.honors div.honor-name {
 			width: 100%;
