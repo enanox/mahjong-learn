@@ -123,6 +123,82 @@ span.centered {
 	padding-top: 30px;
 }
 
+div.history-texts span.centered {
+	padding: 0;
+}
+
+/* === Tiles Page === */
+div.tiles-description {
+	
+}
+	.tiles-description span.text-only {
+		margin: 5px 0px;
+		display: block;
+	}
+	
+div.tiles-ordered {
+	width: 100%;
+}
+	.tiles-ordered div.suits {
+		display: block;
+		float: left; 
+		width: 30%;
+		margin: 0px 10px;
+	}
+		.suits div.suit-name {
+			float: left;
+		}
+		.suits div.suit-pieces {
+			float: left
+		}
+			.suit-pieces ul {
+				padding: 0px 5px;
+			}
+			.suit-pieces ul li {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+	.tiles-ordered div.suits-additional {
+		float: left;
+		display: block;
+		width: 100%;
+		margin: 10px 0px;
+	}
+	.tiles-ordered div.honors {
+		width: 100%;
+		margin: 10px 0px;
+		padding: 10px 0px;
+		display: block;
+	}
+		.honors div.honor-name {
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
+		.honors div.honor-pieces {
+			width: 100%;
+			display: block;
+			padding-bottom: 15px;
+		}
+			.honor-pieces ul {
+				padding: 0px 5px;
+			}
+			.honor-pieces ul li {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				display: inline;
+				float: left;
+			}
+			.honor-pieces li.isDragon  { width: 33%; }
+				.isDragon:nth-child(2) { text-align: center; }
+				.isDragon:last-child   { text-align: right; }
+			.honor-pieces li.isWind  { width: 25%; }
+				.isWind:nth-child(2),
+				.isWind:nth-child(3) { text-align: center; }
+				.isWind:last-child   { text-align: right }
+				
 .animate-enter, 
 .animate-leave
 { 

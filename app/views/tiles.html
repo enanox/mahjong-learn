@@ -1,1 +1,57 @@
-<p>This is the tiles view.</p>
+<header data-mahjong-title></header>
+<article>
+	<div data-mahjong-menu></div>
+	<h2>{{ texts.title[language] }}</h2>
+	
+	<div class="tiles-description">
+		<span class="text-only" 
+			  data-ng-repeat="description in texts.suitsDescription[language].split('. ')">{{ description }}<br/>
+		</span>
+	</div>
+	<div class="tiles-ordered">
+		<div class="suits" data-ng-repeat="suit in tiles.suitsNumbered">
+			<div class="suit-name"><span>{{suit.name[language]}}:</span></div>
+			<div class="suit-pieces">
+				<ul>
+					<li data-ng-repeat="piece in suit.pieces" 
+					    data-ng-class="{isDora: piece.attr.dora, isTerminal: piece.attr.terminal}" 
+					    data-mahjong-tile data-tile="{{piece.name}}" data-size="small">
+					    {{ piece.name[language] }}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="suits-additional">
+			<span class="text-only" 
+				  data-ng-repeat="description in texts.suitsAdditional[language].split('. ')">{{ description }}<br/>
+			</span>
+		</div>
+	</div>
+	<div class="tiles-description">
+		<span class="text-only"
+			  data-ng-repeat="description in texts.honorsDescription[language].split('. ')">{{ description }}</span>
+	</div>
+	<div class="tiles-ordered">
+		<div class="honors" data-ng-repeat="honor in tiles.honors">
+			<div class="honor-name"><span>{{ honor.name[language] }}</span></div>
+			<div class="honor-pieces">
+				<ul>
+					<li data-ng-repeat="piece in honor.pieces"
+						data-ng-class="{isWind: piece.attr.wind, isDragon: piece.attr.dragon}"
+						data-mahjong-tile data-tile="{{piece.name}}" data-size="small">
+						{{ piece.name[language] }}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="suits-additional">
+			<span class="text-only" 
+				  data-ng-repeat="description in texts.honorsAdditional[language].split('. ')">{{ description }}<br/>
+			</span>
+		</div>
+	</div>
+</article>
+<div data-mahjong-continue-button></div>
+<footer>
+	
+</footer>

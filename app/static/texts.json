@@ -113,7 +113,7 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/start"
+			"link": "#/tiles"
 			},
 		"equipmentTitle": {
 			"en": "Equipment",
@@ -156,6 +156,34 @@
 				"decoration": "images/round-winds.png"
 				}
 			}]
+		},
+	"Tiles": {
+		"title": {
+			"en":"The tiles",
+			"es":"Las fichas"
+			},
+		"continue": {
+			"en": "Continue",
+			"es": "Continuar",
+			"link": "#/start"
+			},
+		"suitsDescription": {
+			"en": "The set of mahjong tiles consist of 136 pieces.. There are three different suits numbered from 1 to 9, which are called simple tiles.. They are: ",
+			"es": "El juego de fichas de mahjong consiste de 136 piezas.. Hay tres diferentes palos numerados de 1 a 9, los cuales son llamados fichas simples.. Ellos son: "
+			},
+		"suitsAdditional": {
+			"en": "There are 4 tiles for each one, which gives the current total of 108 tiles so far.. The ones and the nines of each suit are called Terminals.. ",
+			"es": "Existen 4 piezas por cada una, lo que da un total de 108 fichas hasta ahora.. Los unos y los nueves de cada palo son llamados terminales..  "
+			},
+		"honorsDescription": {
+			"en": "Also, there are two different honor suits, which act as bonus tiles in the game: the dragons and the winds.. There are three Dragons: Red, Green and White (in this order) and four Winds: East, South, West and North (in this order).. ",
+			"es": "Además, existen dos tipos diferentes de honores que actúan y puntúan especialmente en el juego: los dragones y los vientos.. Existen tres dragones: Rojo, Verde y Blanco (en este orden) y cuatro vientos: Este, Sur, Oeste y Norte (en este orden).. "
+			},
+		"honorsAdditional": {
+			"en": "In the same way with simple tiles, there are 4 tiles for each honor.. So, the grand total are 136 mahjong tiles..  ",
+			"es": "De la misma manera que con las piezas simples, hay 4 piezas de cada honor.. Entonces, el total son 136 fichas de mahjong.. "
+			},
+		"": {}
 		}
 	}
 }

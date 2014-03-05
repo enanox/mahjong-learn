@@ -1,0 +1,176 @@
+{
+	"suitsNumbered": {
+		"bams": {
+			"name": {
+				"en": "Bams",
+				"es": "Bambúes"
+			},
+			"pieces": [
+				{"name": { "en": "one", "es": "uno", "value": "1", "suit": "B" },
+				 "attr": { 
+					"en": "terminal",
+					"es": "terminal",
+					"terminal": true,
+					"dora": false
+					}
+				},
+				{"name": { "en": "two", "es": "dos", "value": "2", "suit": "B"}},
+				{"name": { "en": "three", "es": "tres", "value": "3", "suit": "B"}},
+				{"name": { "en": "four", "es": "cuatro", "value": "4", "suit": "B"}},
+				{"name": { "en": "five", "es": "cinco", "value": "5", "suit": "B"},
+				 "attr": { 
+						"en": "dora",
+						"es": "dora",
+						"terminal": false,
+						"dora": true
+						}
+				},
+				{"name": { "en": "six", "es": "seis", "value": "6", "suit": "B"}},
+				{"name": { "en": "seven", "es": "siete", "value": "7", "suit": "B"}},
+				{"name": { "en": "eight", "es": "ocho", "value": "8", "suit": "B"}},
+				{"name": { "en": "nine", "es": "nueve", "value": "9", "suit": "B"},
+				 "attr": { 
+						"en": "terminal",
+						"es": "terminal",
+						"terminal": true,
+						"dora": false
+						}
+					}
+				]				
+			},
+		"circles": {
+			"name": {
+				"en": "Circles",
+				"es": "Círculos"
+			},
+			"pieces": [
+				{"name": { "en": "one", "es": "uno", "value": "1", "suit": "D"},
+				 "attr": { 
+					"en": "terminal",
+					"es": "terminal",
+					"terminal": true,
+					"dora": false
+					}
+				},
+				{"name": { "en": "two", "es": "dos", "value": "2", "suit": "D"}},
+				{"name": { "en": "three", "es": "tres", "value": "3", "suit": "D"}},
+				{"name": { "en": "four", "es": "cuatro", "value": "4", "suit": "D"}},
+				{"name": { "en": "five", "es": "cinco", "value": "5", "suit": "D"}},
+				{"name": { "en": "six", "es": "seis", "value": "6", "suit": "D"}},
+				{"name": { "en": "seven", "es": "siete", "value": "7", "suit": "D"}},
+				{"name": { "en": "eight", "es": "ocho", "value": "8", "suit": "D"}},
+				{"name": { "en": "nine", "es": "nueve", "value": "9", "suit": "D"},
+				 "attr": { 
+						"en": "terminal",
+						"es": "terminal",
+						"terminal": true,
+						"dora": false
+						}
+					}
+				]				
+			},
+		"characters": {
+			"name": {
+				"en": "Characters",
+				"es": "Caracteres"
+			},
+			"pieces": [
+				{"name": { "en": "one", "es": "uno", "value": "1", "suit": "C"},
+				 "attr": { 
+					"en": "terminal",
+					"es": "terminal",
+					"terminal": true,
+					"dora": false
+					}
+				},
+				{"name": { "en": "two", "es": "dos", "value": "2", "suit": "C"}},
+				{"name": { "en": "three", "es": "tres", "value": "3", "suit": "C"}},
+				{"name": { "en": "four", "es": "cuatro", "value": "4", "suit": "C"}},
+				{"name": { "en": "five", "es": "cinco", "value": "5", "suit": "C"}},
+				{"name": { "en": "six", "es": "seis", "value": "6", "suit": "C"}},
+				{"name": { "en": "seven", "es": "siete", "value": "7", "suit": "C"}},
+				{"name": { "en": "eight", "es": "ocho", "value": "8", "suit": "C"}},
+				{"name": { "en": "nine", "es": "nueve", "value": "9", "suit": "C"},
+				 "attr": { 
+						"en": "terminal",
+						"es": "terminal",
+						"terminal": true,
+						"dora": false
+						}
+					}
+				]				
+			}
+		},
+	"honors": {
+		"dragons": {
+			"name": {
+				"en": "Dragons",
+				"es": "Dragones"
+				},
+			"pieces": [
+			    {"name": { "en": "Red Dragon", "es": "Dragón Rojo", "value": "R", "suit": "H"},
+			     "attr": {
+			    	"en": "honor",
+			    	"es": "honor",
+			    	"dragon": true,
+			    	"wind": false
+			     	}
+			    },
+			    {"name": { "en": "Green Dragon", "es": "Dragón Verde", "value": "G", "suit": "H"},
+			     "attr": {
+			    	"en": "honor",
+			    	"es": "honor",
+			    	"dragon": true,
+			    	"wind": false
+			     	}
+			    },
+			    {"name": { "en": "White Dragon", "es": "Dragón Blanco", "value": "W", "suit": "H"},
+		    	 "attr": {
+			    	"en": "honor",
+			    	"es": "honor",
+			    	"dragon": true,
+			    	"wind": false
+			     	}
+			    }]
+			},
+		"winds": {
+			"name": {
+				"en": "Winds",
+				"es": "Vientos"
+				},
+			"pieces": [
+			    {"name": { "en": "East", "es": "Este", "value": "E", "suit": "W"},
+			     "attr": {
+			    	"en": "honor",
+			    	"es": "honor",
+			    	"dragon": false,
+			    	"wind": true
+			     	}				    	
+			    },
+			    {"name": { "en": "South", "es": "Sur", "value": "S", "suit": "W"},
+			     "attr": {
+			    	"en": "honor",
+			    	"es": "honor",
+			    	"dragon": false,
+			    	"wind": true
+			     	}				    	
+			   	},
+			   	{"name": { "en": "West", "es": "Oeste", "value": "W", "suit": "W"},
+			     "attr": {
+			    	"en": "honor",
+			    	"es": "honor",
+			    	"dragon": false,
+			    	"wind": true
+			     	}				    	
+			    },
+			    {"name": { "en": "North", "es": "Norte", "value": "N", "suit": "W"},
+			     "attr": {
+			    	"en": "honor",
+			    	"es": "honor",
+			    	"dragon": false,
+			    	"wind": true
+			     	}				    	
+			    }
+			]}
+		}	
+}
