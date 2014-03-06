@@ -153,6 +153,12 @@ div.tiles-ordered {
 		.suits div.suit-name {
 			float: left;
 		}
+		.horizontal .suit-name {
+			width: 70px; 
+		}
+		.vertical .suit-name {
+			width: 60px;
+		}
 		.suits div.suit-pieces {
 			float: left
 		}

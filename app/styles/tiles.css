@@ -1,12 +1,15 @@
 @CHARSET "ISO-8859-1";
 
+/* -------------------------------------- */
+/* 				Tile sizes      		  */
+/* -------------------------------------- */
 span.small {
 	background-image: url(../images/tiles.jpg);
 	background-repeat: no-repeat;
 	display: inline-block;
 	width: 20px;
 	height: 27.3px;
-	border-radius: 2.3px;
+	border-radius: 3px;
 	background-size: 336px 336px;
 }
 span.medium {
@@ -15,7 +18,7 @@ span.medium {
 	display: inline-block;
 	width: 30px;
 	height: 41px;
-	border-radius: 3.5px;
+	border-radius: 4px;
 	background-size: 505px 505px;
 }
 span.large {
@@ -27,141 +30,190 @@ span.large {
 	border-radius: 7px;
 	background-size: auto auto;
 }
-
+/* -------------------------------------- */
+/* 				Bam Tiles 				  */
+/* -------------------------------------- */
 span.bam {	}
 span.bam.large { background-position-y: -340px; }
 span.bam.medium { background-position-y: -170px; }
 span.bam.small { background-position-y: -113.3px; }	
+	/* One */
 	.bam.large.one { background-position-x: -144px; }
 	.bam.medium.one { background-position-x: -72px; }
 	.bam.small.one { background-position-x: -48px; }
+	/* Two */
+	.bam.large.two { background-position-x: -204px; }
+	.bam.medium.two { background-position-x: -102px; }
+	.bam.small.two { background-position-x: -68px; }
+	/* Three */
+	.bam.large.three { background-position-x: -264px; }
+	.bam.medium.three { background-position-x: -132px; }
+	.bam.small.three { background-position-x: -88px; }
+	/* Four */
+	.bam.large.four { background-position-x: -325px; }
+	.bam.medium.four { background-position-x: -162.5px; }
+	.bam.small.four { background-position-x: -108.3px; }
+	/* Five */
+	.bam.large.five { background-position-x: -385px; width: 61px; }
+	.bam.medium.five { background-position-x: -192.5px; width: 30.5px; }
+	.bam.small.five { background-position-x: -128.3px; width: 20.3px; }
+	/* Five (Dora) */
+	.isDora > .bam.large.five { background-position-x: -809px; background-position-y: -836px; width: 60px; }
+	.isDora > .bam.medium.five { background-position-x: -404.5px; background-position-y: -418px; width: 30px; }
+	.isDora > .bam.small.five { background-position-x: -269.6px; background-position-y: -278.6px; width: 20px; }
+	/* Six */
+	.bam.large.six { background-position-x: -445px; width: 61px; }
+	.bam.medium.six { background-position-x: -222.5px; width: 30.5px; }
+	.bam.small.six { background-position-x: -148.3px; width: 20.3px; }
+	/* Seven */
+	.bam.large.seven { background-position-x: -506px; width: 61px; }
+	.bam.medium.seven { background-position-x: -253px; width: 30.5px; }
+	.bam.small.seven { background-position-x: -168.6px; width: 20.3px; }
+	/* Eight */
+	.bam.large.eight { background-position-x: -567px; width: 61px; }
+	.bam.medium.eight { background-position-x: -283.5px; width: 30.5px; }
+	.bam.small.eight { background-position-x: -188px; width: 20.3px; }
+	/* Nine */
+	.bam.large.nine { background-position-x: -627px; width: 60px; }
+	.bam.medium.nine { background-position-x: -313.5px; width: 30px; }
+	.bam.small.nine { background-position-x: -208px; width: 20px; }
 	
-	.bam.two { background-position-x: -204px; }
-	.bam.three { background-position-x: -264px; }
-	.bam.four { background-position-x: -325px; }
-	.bam.five { background-position-x: -385px; width: 61px; }
-	.isDora > .bam.five { background-position-x: -809px; background-position-y: -836px; width: 60px; }
-	.bam.six {
-		background-position-x: -445px;
-		width: 61px;
-	}
-	.bam.seven {
-		background-position-x: -506px -340px;
-		width: 61px;
-	}
-	.bam.eight {
-		background-position-x: -567px -340px;
-		width: 61px;
-	}
-	.bam.nine {
-		background-position-x: -627px -340px;
-		width: 60px;
-	}
-
+/* -------------------------------------- */
+/* 				Circle Tiles			  */
+/* -------------------------------------- */
 span.circle { }
 span.circle.large { background-position-y: -10px}
 span.circle.medium { background-position-y: -5px; }
 span.circle.small { background-position-y: -3.3px; }
+	/* One */
 	.circle.large.one { background-position-x: -144px; }
 	.circle.medium.one { background-position-x: -72px; }
 	.circle.small.one { background-position-x: -48px; }
+	/* Two */
+	.circle.large.two { background-position-x: -204px; }
+	.circle.medium.two { background-position-x: -102px; }
+	.circle.small.two { background-position-x: -68px; }
+	/* Three */
+	.circle.large.three { background-position-x: -264px; }
+	.circle.medium.three { background-position-x: -132px; }
+	.circle.small.three { background-position-x: -88px; }
+	/* Four */
+	.circle.large.four { background-position-x: -324px; }
+	.circle.medium.four { background-position-x: -162px; }
+	.circle.small.four { background-position-x: -108px; }
+	/* Five */
+	.circle.large.five { background-position-x: -385px; }
+	.circle.medium.five { background-position-x: -192.5px; }
+	.circle.small.five { background-position-x: -128.3px; }
+	/* Five (Dora) */
+	.isDora > .circle.large.five { background-position-x: -807px; background-position-y: -670px; }
+	.isDora > .circle.medium.five { background-position-x: -403.5px; background-position-y: -336px; }
+	.isDora > .circle.small.five { background-position-x: -268px; background-position-y: -223.3px; }
+	/* Six */
+	.circle.large.six { background-position-x: -446px; }
+	.circle.medium.six { background-position-x: -223px; }
+	.circle.small.six { background-position-x: -148.6px; }
+	/* Seven */
+	.circle.large.seven { background-position-x: -506px; }
+	.circle.medium.seven { background-position-x: -253px; }
+	.circle.small.seven { background-position-x: -168.6px; }
+	/* Eight */
+	.circle.large.eight { background-position-x: -566px; }
+	.circle.medium.eight { background-position-x: -283px; }
+	.circle.small.eight { background-position-x: -188.6px; }
+	/* Nine */
+	.circle.large.nine { background-position-x: -626px; }
+	.circle.medium.nine { background-position-x: -313px; }
+	.circle.small.nine { background-position-x: -208.6px; }
 	
-	.circle.two {
-		background-position-x: -204px -10px;
-	}
-	.circle.three {
-		background-position-x: -264px -10px;
-	}
-	.circle.four {
-		background-position-x: -324px -10px;
-	}
-	.circle.five {
-		background-position-x: -385px -10px;
-	}
-	.isDora > .circle.five {
-		background-position-x: -807px -670px;
-	}
-	.circle.six {
-		background-position-x: -446px -10px;
-	}
-	.circle.seven {
-		background-position-x: -506px -10px;
-	}
-	.circle.eight {
-		background-position-x: -566px -10px;
-	}
-	.circle.nine {
-		background-position-x: -626px -10px;
-	}
-
+/* -------------------------------------- */
+/* 				Character Tiles			  */
+/* -------------------------------------- */
 span.char {	}
 span.char.large { background-position-y: -670px; }
 span.char.medium { background-position-y: -335px; }
 span.char.small { background-position-y: -223.3px; }
+	/* One */
 	.char.large.one { background-position-x: -146px; }
 	.char.medium.one { background-position-x: -73px; }
 	.char.small.one { background-position-x: -48.6px; }
+	/* Two */ 
+	.char.large.two { background-position-x: -206px; }
+	.char.medium.two { background-position-x: -103px; }
+	.char.small.two { background-position-x: -68.6px; }
+	/* Three */
+	.char.large.three { background-position-x: -266px; }
+	.char.medium.three { background-position-x: -133px; }
+	.char.small.three { background-position-x: -88.6px; }
+	/* Four */
+	.char.large.four { background-position-x: -326px; }
+	.char.medium.four { background-position-x: -163px; }
+	.char.small.four { background-position-x: -108.6px; }
+	/* Five */
+	.char.large.five { background-position-x: -386px; }
+	.char.medium.five { background-position-x: -193px; }
+	.char.small.five { background-position-x: -128.6px; }
+	/* Five (Dora) */
+	.isDora > .char.large.five { background-position-x: -808px; background-position-y: -918px; }	
+	.isDora > .char.medium.five { background-position-x: -404px; background-position-y: -459px; }
+	.isDora > .char.small.five { background-position-x: -269.3px; background-position-y: -306px; }
+	/* Six */
+	.char.large.six { background-position-x: -447px; }
+	.char.medium.six { background-position-x: -223.5px; }
+	.char.small.six { background-position-x: -149px; }
+	/* Seven */
+	.char.large.seven { background-position-x: -507px; }
+	.char.medium.seven { background-position-x: -253.5px; }
+	.char.small.seven { background-position-x: -169px; }
+	/* Eight */
+	.char.large.eight { background-position-x: -567px; }
+	.char.medium.eight { background-position-x: -284px; }
+	.char.small.eight { background-position-x: -189px; }
+	/* Nine */
+	.char.large.nine { background-position-x: -627px; }
+	.char.medium.nine { background-position-x: -314px; }
+	.char.small.nine { background-position-x: -209px; }
 	
-	.char.two {
-		background-position-x: -206px -670px;
-	}
-	.char.three {
-		background-position-x: -266px -670px;
-	}
-	.char.four {
-		background-position-x: -326px -670px;
-	}
-	.isDora > .char.five {
-		background-position-x: -808px -918px;
-	}
-	.char.five {
-		background-position-x: -386px -670px;
-	}
-	.char.six {
-		background-position-x: -447px -670px;
-	}
-	.char.seven {
-		background-position-x: -507px -670px;
-	}
-	.char.eight {
-		background-position-x: -567px -670px;
-	}
-	.char.nine {
-		background-position-x: -627px -670px;
-	}
-
+/* -------------------------------------- */
+/* 				Dragon Tiles			  */
+/* -------------------------------------- */
 span.honor { }
 span.honor.large { height: 84px; background-position-y: -11px; }
 span.honor.medium { height: 42px; background-position-y: -5.5px }
 span.honor.small { height: 28px; background-position-y: -3.6px; }	
+	/* Red Dragon */
 	.honor.large.red-dragon { background-position-x: -687px; }
 	.honor.medium.red-dragon { background-position-x: -343.5px; }
 	.honor.small.red-dragon { background-position-x: -229px; }
-	
+	/* Green Dragon */
 	.honor.large.green-dragon { background-position-x: -747px; }
 	.honor.medium.green-dragon { background-position-x: -373.5px; }
 	.honor.small.green-dragon { background-position-x: -249px; }
-	
+	/* White Dragon */
 	.honor.large.white-dragon { background-position-x: -807px; }
 	.honor.medium.white-dragon { background-position-x: -403.5px; }
 	.honor.small.white-dragon { background-position-x: -269px; }
-
+/* -------------------------------------- */
+/* 				Wind Tiles				  */
+/* -------------------------------------- */
 span.wind {	}
 span.wind.large { height: 83px; background-position-y: -341px; }
 span.wind.medium { height: 41.5px; background-position-y: -170.5px; }
 span.wind.small { height: 27.6px; background-position-y: -113.6px; }
+	/* East Wind */
 	.wind.large.east-wind { background-position-x: -685px; }
 	.wind.medium.east-wind { background-position-x: -342.5px; }
 	.wind.small.east-wind { background-position-x: -228.3px; }
-	
+	/* South Wind */
 	.wind.large.south-wind { background-position-x: -745px; }
 	.wind.medium.south-wind { background-position-x: -372.5px; }
 	.wind.small.south-wind { background-position-x: -248.3px; }
-	
+	/* West Wind */
 	.wind.large.west-wind { background-position-x: -686px; }
 	.wind.medium.west-wind { background-position-x: -343px; }
 	.wind.small.west-wind { background-position-x: -228.6px; }
-	
+	/* North Wind */
 	.wind.large.north-wind { background-position-x: -747px; }
 	.wind.medium.north-wind { background-position-x: -373.5px; }
 	.wind.small.north-wind { background-position-x: -249px; }
+	

@@ -12,9 +12,14 @@ describe('Directive: mahjongTile', function () {
     scope = $rootScope.$new();
   }));
 
-  it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<mahjong-tile></mahjong-tile>');
+  it('should append child spans with tile name and with tile image', inject(function ($compile) {
+	var objectTile = {'en': 'one', 'es': 'uno', 'value': 1, 'suit': 'B'};
+	
+    element = angular.element('<div mahjong-tile></div>');
+    element.attr('data-tile',JSON.stringify(objectTile));
     element = $compile(element)(scope);
-    //expect(element.text()).toBe('this is the mahjongTile directive');
+    
+    expect(element.find('span').eq(0).hasClass('')).toBe(true);
+    expect(element.find('span').eq(1).hasClass('bam one')).toBe(true);
   }));
 });

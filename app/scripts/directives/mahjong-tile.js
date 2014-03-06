@@ -6,8 +6,8 @@ angular.module('mahjongLearnAppApp')
       template: '<span></span>',
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
-        //element.text('this is the mahjongTile directive');
-    	var lang = L10n.getBrowserLanguage();
+
+    	var lang = L10n.getBrowserLanguage();    	
     	var tile = JSON.parse(attrs.tile);
     	var showName = attrs.showName === 'true';
     	var size = attrs.size || '';  
