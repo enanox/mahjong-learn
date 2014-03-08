@@ -13,4 +13,14 @@ describe('MahjongLearnApp App', function() {
 		});
 	});
 	
+	describe('Welcome page', function() {
+		beforeEach(function() {
+			browser().navigateTo('#/welcome');
+		});
+		
+		it('should load all the localized texts', function() {
+			
+		});
+	});
+	
 });

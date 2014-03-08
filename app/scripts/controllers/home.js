@@ -12,27 +12,26 @@ angular.module('mahjongLearnAppApp')
     $scope.continueVisible = false;
     
     function getTextsForHome()  {
-    	L10n.loadTextsForView()
-    		.success(function(staticTexts) {
-		  		$scope.texts = staticTexts.texts['Home'];
-		  		$scope.menu = staticTexts.texts.menu;
-		  	})
-		  	.error(function(error) {
-		  		$scope.error = 'Error loading texts ' + error.message;
-		  	});
+      L10n.loadTextsForView()
+        .success(function(staticTexts) {
+        $scope.texts = staticTexts.texts.Home;
+        $scope.menu = staticTexts.texts.menu;
+      })
+      .error(function(error) {
+        $scope.error = 'Error loading texts ' + error.message;
+      });
     }
     
     getTextsForHome();
-   
+    
     function init() {
     	setInterval(function() {
-	    	setTimeout(function() {
-	    		$scope.visible = !$scope.visible;
-	    		$scope.$apply();
-	    		
-	    		showLegends();
-	    	},4000);
-    	}, 10000);
+    	  setTimeout(function() {
+    	  	$scope.visible = !$scope.visible;
+    	  	$scope.$apply();
+    	  	showLegends();
+        },4000);
+      }, 10000);
     }
     
     function showLegends()  {

@@ -12,14 +12,14 @@ angular.module('mahjongLearnAppApp')
     $scope.visible = false;
     
     function getTextsForWelcome()  {
-    	L10n.loadTextsForView()
-			.success(function(staticTexts) {
-		  		$scope.texts = staticTexts.texts['Welcome'];
-		  		$scope.menu = staticTexts.texts.menu;
-		  	})
-		  	.error(function(error) {
-		  		$scope.error = 'Error loading texts ' + error.message;
-		  	});
+      L10n.loadTextsForView()
+      	.success(function(staticTexts) {
+		  	$scope.texts = staticTexts.texts.Welcome;
+		  	$scope.menu = staticTexts.texts.menu;
+		  })
+		.error(function(error) {
+		    $scope.error = 'Error loading texts ' + error.message;
+		  });
     }
     
     getTextsForWelcome();

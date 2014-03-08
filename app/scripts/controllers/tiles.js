@@ -13,17 +13,17 @@ angular.module('mahjongLearnAppApp')
     $scope.tiles = Tiles.getTiles();
     
     function getTextsForTiles()  {
-    	L10n.loadTextsForView()
-    		.success(function(staticTexts) {
-		  		$scope.texts = staticTexts.texts['Tiles'];
-		  		$scope.menu = staticTexts.texts.menu;
-		  	})
-		  	.error(function(error) {
-		  		$scope.error = 'Error loading texts ' + error.message;
-		  	});
+      L10n.loadTextsForView()
+        .success(function(staticTexts) {
+		    $scope.texts = staticTexts.texts.Tiles;
+		    $scope.menu = staticTexts.texts.menu;
+		  })
+		.error(function(error) {
+			  $scope.error = 'Error loading texts ' + error.message;
+		  });
     }
     
-    getTextsForTiles();  
+    getTextsForTiles();
     
   
   });
