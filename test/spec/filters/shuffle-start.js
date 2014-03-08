@@ -11,9 +11,9 @@ describe('Filter: shuffleStart', function () {
     shuffleStart = $filter('shuffleStart');
   }));
 
-  it('should return the input prefixed with "shuffleStart filter:"', function () {
+  it('should return a random number"', function () {
     var text = 'angularjs';
-    expect(shuffleStart(text)).toBe('shuffleStart filter: ' + text);
+    expect(shuffleStart(text)).toBeTruthy();
   });
 
 });
