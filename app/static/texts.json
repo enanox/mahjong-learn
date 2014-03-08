@@ -183,7 +183,29 @@
 			"en": "In the same way with simple tiles, there are 4 tiles for each honor.. So, the grand total are 136 mahjong tiles..  ",
 			"es": "De la misma manera que con las piezas simples, hay 4 piezas de cada honor.. Entonces, el total son 136 fichas de mahjong.. "
 			},
-		"": {}
+		"preparationAdditional": {
+			"en": "In the next page we will show you how to prepare your game table.. Hit Continue!",
+			"es": "En la siguiente pantalla te mostraremos como preparar tu mesa de juego.. Clickea en Continuar!"
+			}
+		},
+	"Start": {
+		"title": {
+			"en":"Starting the game",
+			"es":"Iniciando el juego"
+			},
+		"continue": {
+			"en": "Continue",
+			"es": "Continuar",
+			"link": "#/yaku"
+			},
+		"titlePreparation": {
+			"en": "Preparation",
+			"es": "Preparación"
+			},
+		"preparationDescription": {
+			"en": "First of all, you must turn back your tiles and shuffle them pretty well.. After you''ve shuffled the tiles you must form a \"wall\" consisting of a lineal arrangement of 17 tiles width and 2 tiles height, each one placed in front of every seat.. ",
+			"es": "Primero, debes voltear tus fichas boca abajo y mezclarlas muy bien.. Luego de mezclarlas, debes formar un \"muro\" agrupando linealmente las fichas de 17 de ancho y 2 de alto, cada grupo ubicado frente a cada asiento.. "
+		  }
 		}
 	}
 }

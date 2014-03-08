@@ -13,7 +13,9 @@ describe('Directive: mahjongComplementImage', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
+  	var localized = {'en': 'Text', 'es': 'Texto', 'decoration': '' };
     element = angular.element('<div mahjong-complement-image></div>');
+    element.attr('data-localized',JSON.stringify(localized));
     element = $compile(element)(scope);
     
     expect(element.children().length).toBe(2);

@@ -13,8 +13,12 @@
 			<div class="suit-name"><span>{{suit.name[language]}}:</span></div>
 			<div class="suit-pieces">
 				<ul>
-					<li data-ng-repeat="piece in suit.pieces" 
+					<!-- <li data-ng-repeat="piece in suit.pieces" 
 					    data-ng-class="{isDora: piece.attr.dora, isTerminal: piece.attr.terminal}" 
+					    data-mahjong-tile data-tile="{{piece.name}}" data-show-name="true" data-size="large">
+					    {{ piece.name[language] }}
+					</li>-->
+					<li data-ng-repeat="piece in suit.pieces" 
 					    data-mahjong-tile data-tile="{{piece.name}}" data-show-name="true" data-size="large">
 					    {{ piece.name[language] }}
 					</li>
@@ -50,6 +54,13 @@
 			</span>
 		</div>
 	</div>
+	<div class="tiles-description">
+		<!-- <span class="back large"></span> -->
+		<span class="text-only" 
+			  data-ng-repeat="description in texts.preparationAdditional[language].split('. ')">{{ description }}<br/>
+		</span>
+	</div>
+	<div style="clear: both"></div>
 </article>
 <div data-mahjong-continue-button></div>
 <footer>

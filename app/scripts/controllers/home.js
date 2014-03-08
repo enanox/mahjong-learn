@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mahjongLearnAppApp').controller('HomeCtrl',
-    function($scope, L10n) {
+    function($scope, $timeout, $interval, L10n) {
 	    $scope.awesomeThings = [ 'HTML5 Boilerplate', 'AngularJS', 'Karma' ];
 
 	    $scope.language = L10n.getBrowserLanguage();
@@ -19,10 +19,9 @@ angular.module('mahjongLearnAppApp').controller('HomeCtrl',
 	    getTextsForHome();
 
 	    function init() {
-		    setInterval(function() {
-			    setTimeout(function() {
+		    $interval(function() {
+			    $timeout(function() {
 				    $scope.visible = !$scope.visible;
-				    $scope.$apply();
 				    showLegends();
 			    }, 4000);
 		    }, 10000);
@@ -32,7 +31,6 @@ angular.module('mahjongLearnAppApp').controller('HomeCtrl',
 		    $scope.visibleBefLegend = !$scope.visibleBefLegend;
 		    $scope.visibleLegend = !$scope.visibleLegend;
 		    $scope.continueVisible = true;
-		    $scope.$apply();
 	    }
 
 	    init();

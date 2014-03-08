@@ -35,7 +35,7 @@ angular.module('mahjongLearnAppApp').directive('mahjongTile', function(L10n) {
 		  };
 
 		  tileDesignSpan.addClass(suitClasses[tile.suit]);
-
+		  
 		  switch (tile.suit) {
 			  case 'H':
 				  tileDesignSpan.addClass(dragonClasses[tile.value]);

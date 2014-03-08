@@ -13,7 +13,6 @@ angular
 	          template : '<span></span><span class="text"></span>',
 	          restrict : 'A',
 	          link : function postLink(scope, element/* , attrs */) {
-		          // element.text('this is the mahjongComplementImage directive');
 		          var localizedTexts = scope.localized;
 		          var language = L10n.getBrowserLanguage();
 

@@ -10,8 +10,7 @@
 				 "attr": { 
 					"en": "terminal",
 					"es": "terminal",
-					"terminal": true,
-					"dora": false
+					"terminal": true
 					}
 				},
 				{"name": { "en": "two", "es": "dos", "value": "2", "suit": "B"}},
@@ -22,7 +21,6 @@
 						"en": "dora",
 						"es": "dora",
 						"terminal": false,
-						"dora": true,
 						"doraCount": 2
 						}
 				},
@@ -33,8 +31,7 @@
 				 "attr": { 
 						"en": "terminal",
 						"es": "terminal",
-						"terminal": true,
-						"dora": false
+						"terminal": true
 						}
 					}
 				]				
@@ -49,8 +46,7 @@
 				 "attr": { 
 					"en": "terminal",
 					"es": "terminal",
-					"terminal": true,
-					"dora": false
+					"terminal": true
 					}
 				},
 				{"name": { "en": "two", "es": "dos", "value": "2", "suit": "D"}},
@@ -61,7 +57,6 @@
 						"en": "dora",
 						"es": "dora",
 						"terminal": false,
-						"dora": true,
 						"doraCount": 1
 						}
 				},
@@ -72,8 +67,7 @@
 				 "attr": { 
 						"en": "terminal",
 						"es": "terminal",
-						"terminal": true,
-						"dora": false
+						"terminal": true
 						}
 					}
 				]				
@@ -88,8 +82,7 @@
 				 "attr": { 
 					"en": "terminal",
 					"es": "terminal",
-					"terminal": true,
-					"dora": false
+					"terminal": true
 					}
 				},
 				{"name": { "en": "two", "es": "dos", "value": "2", "suit": "C"}},
@@ -100,7 +93,6 @@
 						"en": "dora",
 						"es": "dora",
 						"terminal": false,
-						"dora": true,
 						"doraCount": 1
 						}
 				},
@@ -111,8 +103,7 @@
 				 "attr": { 
 						"en": "terminal",
 						"es": "terminal",
-						"terminal": true,
-						"dora": false
+						"terminal": true
 						}
 					}
 				]				

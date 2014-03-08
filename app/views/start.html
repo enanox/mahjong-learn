@@ -1,1 +1,29 @@
-<p>This is the start view.</p>
+<header data-mahjong-title></header>
+<article>
+	<div data-mahjong-menu></div>
+	<h2>{{ texts.title[language] }}</h2>
+	
+	<div class="start-description">
+		<span class="text-only"
+			  data-ng-repeat="description in texts.preparationDescription[language].split('. ')">
+			  {{ description }}
+		</span>
+	</div>
+	<div class="start-game-table" data-ng-show="scrambledTiles.length">
+		<div class="start-buttons" data-ng-show="myDebugMode">
+		<button data-ng-click="toggleFlip()">Flip</button>
+		<button data-ng-click="shuffle()">Shuffle</button>
+		</div>
+		<ul>
+			<li data-ng-repeat="tile in scrambledTiles track by $index | shuffleStart"
+				data-mahjong-tile data-tile="{{ tile.name }}" data-size="medium"
+				data-ng-class="{'back': areFlipped, 'isDora': tile.attr.dora}"
+				class=""></li>
+		</ul>
+	</div>
+	<div style="clear: both"></div>
+</article>
+<div data-mahjong-continue-button></div>
+<footer>
+	
+</footer>

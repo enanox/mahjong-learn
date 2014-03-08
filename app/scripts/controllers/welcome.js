@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mahjongLearnAppApp').controller('WelcomeCtrl',
-    function($scope, L10n) {
+    function($scope, $timeout, L10n) {
 	    $scope.awesomeThings = [ 'HTML5 Boilerplate', 'AngularJS', 'Karma' ];
 
 	    $scope.language = L10n.getBrowserLanguage();
@@ -18,10 +18,9 @@ angular.module('mahjongLearnAppApp').controller('WelcomeCtrl',
 
 	    getTextsForWelcome();
 
-	    setTimeout(function() {
+	    $timeout(function() {
 		    $scope.visible = true;
 		    $scope.continueVisible = true;
-		    $scope.$apply();
 	    }, 1500);
 
     });

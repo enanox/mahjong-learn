@@ -30,6 +30,44 @@ span.large {
 	border-radius: 7px;
 	background-size: auto auto;
 }
+.back > span {
+	background-position: 0px 0px !important;
+}
+.back > span.small {
+	background-image: url(../images/tile-back.png) !important;
+	background-repeat: no-repeat;
+	background-size: 20px 27.3px;
+	display: inline-block;
+	width: 20px;
+	height: 27.3px;
+	border-radius: 3px;
+}
+.back > span.medium {
+	background-image: url(../images/tile-back.png) !important;
+	background-repeat: no-repeat;	
+	background-size: 30px 41px;
+	display: inline-block;
+	width: 30px;
+	height: 41px;
+	border-radius: 4px;
+}
+.back > span.large {
+	background-image: url(../images/tile-back.png) !important;
+	background-repeat: no-repeat;	
+	display: inline-block;
+	width: 60px;
+	height: 82px;
+	border-radius: 7px;
+}
+/* -------------------------------------- */
+/* 			  Rotated Tiles 			  */
+/* -------------------------------------- */
+span.shuffled-30.large { -webkit-transform: rotate(-30deg); moz-transform: rotate(-30deg); }
+span.shuffled-45.large { -webkit-transform: rotate(-45deg); moz-transform: rotate(-45deg); }
+span.shuffled-60.large { -webkit-transform: rotate(-60deg); moz-transform: rotate(-60deg); }
+span.shuffled30.large { -webkit-transform: rotate(30deg); moz-transform: rotate(30deg); }
+span.shuffled45.large { -webkit-transform: rotate(45deg); moz-transform: rotate(45deg); }
+span.shuffled60.large { -webkit-transform: rotate(60deg); moz-transform: rotate(60deg); }
 /* -------------------------------------- */
 /* 				Bam Tiles 				  */
 /* -------------------------------------- */
