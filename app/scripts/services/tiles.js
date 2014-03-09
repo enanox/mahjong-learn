@@ -27,23 +27,23 @@ angular
 		        return loadTilesFromServer();
 	        };
 
-	        var joinTiles = function(tileObject) {
-		        var cloneData = function(o) {
-			        var newObject = {};
+	        var cloneData = function(o) {
+		        var newObject = {};
 
-			        for ( var prop in o) {
-				        if (o.hasOwnProperty(prop)) {
-					        newObject[prop] = o[prop];
+		        for ( var prop in o) {
+			        if (o.hasOwnProperty(prop)) {
+				        newObject[prop] = o[prop];
 
-					        for ( var prop2nd in o[prop]) {
-						        newObject[prop][prop2nd] = o[prop][prop2nd];
-					        }
+				        for ( var prop2nd in o[prop]) {
+					        newObject[prop][prop2nd] = o[prop][prop2nd];
 				        }
 			        }
+		        }
 
-			        return newObject;
-		        };
+		        return newObject;
+	        };
 
+	        var joinTiles = function(tileObject) {
 		        var index = [ {
 		          'firstOrder' : 'suitsNumbered',
 		          'list' : 'pieces',
@@ -58,16 +58,13 @@ angular
 		        var firstOrder = '', each = '';
 		        var doraPosition = {
 		          'B' : {
-		            'value' : 5,
-		            'doraFound' : false
+			          'value' : 5
 		          },
 		          'D' : {
-		            'value' : 5,
-		            'doraFound' : false
+			          'value' : 5
 		          },
 		          'C' : {
-		            'value' : 5,
-		            'doraFound' : false
+			          'value' : 5
 		          }
 		        };
 
@@ -80,7 +77,8 @@ angular
 
 					        if (tileObject[firstOrder].hasOwnProperty(each)) {
 						        for ( var k = 0; k < tileObject[firstOrder][each].pieces.length; k++) {
-							        var joinedTile = tileObject[firstOrder][each].pieces[k];
+
+							        var joinedTile = cloneData(tileObject[firstOrder][each].pieces[k]);
 							        var kj = 4;
 							        var doraCount = null;
 
@@ -89,13 +87,15 @@ angular
 									        doraCount = joinedTile.attr.doraCount;
 								        }
 							        }
-							        var newTile = null;
+
 							        do {
 
-								        newTile = cloneData(joinedTile);
+								        var newTile = cloneData(joinedTile);
 								        var tileSuit = newTile.name.suit;
+								        newTile.name.value = doraPosition.hasOwnProperty(tileSuit) ? Number(newTile.name.value) : newTile.name.value;
 
 								        if (newTile.attr && newTile.name.value === 5 && doraPosition.hasOwnProperty(tileSuit)) {
+
 									        if (doraCount > 0) {
 										        newTile.attr.dora = true;
 										        doraCount--;
@@ -121,10 +121,9 @@ angular
 
 	        var shuffle = function(tileList) {
 		        for ( var i, tmp, n = tileList.length; n; i = Math.floor(Math
-		            .random() * n), tmp = tileList[--n], tileList[n] = tileList[i], tileList[i] = tmp)  {
-		        
+		            .random() * n), tmp = tileList[--n], tileList[n] = tileList[i], tileList[i] = tmp) {
 		        }
-		        
+
 		        return tileList;
 	        };
 	        // Public API here
