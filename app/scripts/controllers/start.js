@@ -192,9 +192,9 @@ angular
 	        	var seatDiceThrow = [];
 	        	var dice = 0;
 	        	
-	        	for(var i = 0; i < $scope.seatWalls.length; i++)  {
+	        	for(var i = 1; i <= $scope.seatWalls.length; i++)  {
 	        		dice = 1 + Math.floor(Math.random() * 12);
-	        		console.log('seat ' + i + ' threw dice = ' + dice);
+	        		console.log('seat ' + (i) + ' threw dice = ' + dice);
 	        		seatDiceThrow.push({seat: i, diceThrow: dice})
 	        	};
 	        	
@@ -205,10 +205,14 @@ angular
 	        	$scope.seats = [];
 	        	
 	        	console.log(seatDiceThrow)
-	        	for(var i = 0; i < $scope.seatWalls.length; i++)  {
+	        	for(var i = 1; i <= $scope.seatWalls.length; i++)  {
+	        		var eachWall = $scope.seatWalls[i - 1];
+	        		
+	        		console.log('seat' + i , eachWall)
 	        		for(var j = 0; j < seatDiceThrow.length; j++)  {
 	        			if(seatDiceThrow[j].seat == i)
-	        			$scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i], seatWind: $scope.windsOrder[i], order: j});
+	        				$scope.seats.push({order: j, wallToDraw: $scope.seatWalls[i], wind: $scope.windsOrder[j]});
+	        			//$scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i], seatWind: $scope.windsOrder[i], order: j});
 	        		}
 	        		//if(seatDiceThrow[i].seat == i)	        		
 	        			//$scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i], seatWind: $scope.windsOrder[i]});
