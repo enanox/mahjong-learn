@@ -4,21 +4,44 @@
 	<h2>{{ texts.title[language] }}</h2>
 	
 	<div class="start-description">
-		<span class="text-only"
+		<span class="text-only" data-ng-show="showFirstDescription"
 			  data-ng-repeat="description in texts.preparationDescription[language].split('. ')">
+			  {{ description }}
+		</span>
+		<span class="text-only" data-ng-show="showSecondDescription"
+			  data-ng-repeat="description in texts.diceDescription[language].split('. ')">
 			  {{ description }}
 		</span>
 	</div>
 	<div class="start-game-table" data-ng-show="scrambledTiles.length">
 		<div class="start-buttons" data-ng-show="myDebugMode">
 		<button data-ng-click="toggleFlip()">Flip</button>
-		<button data-ng-click="shuffle()">Shuffle</button>
+		<button data-ng-click="shuffle(true)">Shuffle</button>
+		<button data-ng-click="order()">Order wall</button>
 		</div>
 		<ul>
 			<li data-ng-repeat="tile in scrambledTiles track by $index | shuffleStart"
 				data-mahjong-tile data-tile="{{ tile.name }}" data-size="medium"
-				data-ng-class="{'back': areFlipped, 'isDora': tile.attr.dora}"
-				class=""></li>
+				data-ng-class="{'back': areFlipped, 'isDora': tile.attr.dora}"></li>
+		</ul>
+	</div>
+	<div class="start-game-table wall" data-ng-show="seatWalls.length">
+		<div class="start-buttons" data-ng-show="myDebugMode">
+		<button data-ng-click="toggleFlip()">Flip</button>
+		<button data-ng-click="fullSeatDiceThrow()">Throw Dice</button>
+		</div>
+		<ul data-ng-repeat="seat in seatWalls" class="{{ 'seat' + ($index + 1)}}">
+			<li class="seatName">
+				<span data-ng-show="($index + 1) == 3" data-ng-class="{'yourSeat': ($index + 1) == 2}">{{ texts.yourSeat[language] }}</span>
+				<!-- <span class="{'seatIndicator' + ' lala'}" data-ng-show="playerOrder.length">{{texts.windsOrder[playerOrder[$index].seatWind][language]}}</span>-->
+				<span class="{'seatIndicator' + ' lala'}" data-ng-show="playerOrder.length">{{seats[$index].seat}}</span>
+			</li>
+			<li data-ng-repeat="tile in seat track by $index" data-mahjong-tile data-tile="{{ tile.name }}" 
+				data-size="{{size}}" data-seat="{{ $parent.$index + 1}}"
+				data-ng-class="{'back': areFlipped, 'isDora': tile.attr.dora, 
+								'seat1': $parent.$index == 0, 'seat2': $parent.$index == 1,
+								'seat3': $parent.$index == 2, 'seat4': $parent.$index == 3}"
+				data-ng-style="getTilesWallPosition($parent.$index, $index)"></li>
 		</ul>
 	</div>
 	<div style="clear: both"></div>

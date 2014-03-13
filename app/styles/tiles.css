@@ -62,12 +62,41 @@ span.large {
 /* -------------------------------------- */
 /* 			  Rotated Tiles 			  */
 /* -------------------------------------- */
+span.shuffled-27.large { -webkit-transform: rotate(-27deg); moz-transform: rotate(-27deg); }
+span.shuffled-27.medium { -webkit-transform: rotate(-27deg); moz-transform: rotate(-27deg); }
+span.shuffled-27.small { -webkit-transform: rotate(-27deg); moz-transform: rotate(-27deg); }
+
 span.shuffled-30.large { -webkit-transform: rotate(-30deg); moz-transform: rotate(-30deg); }
+span.shuffled-30.medium { -webkit-transform: rotate(-30deg); moz-transform: rotate(-30deg); }
+span.shuffled-30.small { -webkit-transform: rotate(-30deg); moz-transform: rotate(-30deg); }
+
+span.shuffled-33.large { -webkit-transform: rotate(-33deg); moz-transform: rotate(-33deg); }
+span.shuffled-33.medium { -webkit-transform: rotate(-33deg); moz-transform: rotate(-33deg); }
+span.shuffled-33.small { -webkit-transform: rotate(-33deg); moz-transform: rotate(-33deg); }
+
 span.shuffled-45.large { -webkit-transform: rotate(-45deg); moz-transform: rotate(-45deg); }
+span.shuffled-45.medium { -webkit-transform: rotate(-45deg); moz-transform: rotate(-45deg); }
+span.shuffled-45.small { -webkit-transform: rotate(-45deg); moz-transform: rotate(-45deg); }
 span.shuffled-60.large { -webkit-transform: rotate(-60deg); moz-transform: rotate(-60deg); }
+span.shuffled-60.medium { -webkit-transform: rotate(-60deg); moz-transform: rotate(-60deg); }
+span.shuffled-60.small { -webkit-transform: rotate(-60deg); moz-transform: rotate(-60deg); }
+
+span.shuffled24.large { -webkit-transform: rotate(24deg); moz-transform: rotate(24deg); }
+span.shuffled24.medium { -webkit-transform: rotate(24deg); moz-transform: rotate(24deg); }
+span.shuffled24.small { -webkit-transform: rotate(24deg); moz-transform: rotate(24deg); }
+span.shuffled33.large { -webkit-transform: rotate(33deg); moz-transform: rotate(33deg); }
+span.shuffled33.medium { -webkit-transform: rotate(33deg); moz-transform: rotate(33deg); }
+span.shuffled33.small { -webkit-transform: rotate(33deg); moz-transform: rotate(33deg); }
+
 span.shuffled30.large { -webkit-transform: rotate(30deg); moz-transform: rotate(30deg); }
+span.shuffled30.medium { -webkit-transform: rotate(30deg); moz-transform: rotate(30deg); }
+span.shuffled30.small { -webkit-transform: rotate(30deg); moz-transform: rotate(30deg); }
 span.shuffled45.large { -webkit-transform: rotate(45deg); moz-transform: rotate(45deg); }
+span.shuffled45.medium { -webkit-transform: rotate(45deg); moz-transform: rotate(45deg); }
+span.shuffled45.small { -webkit-transform: rotate(45deg); moz-transform: rotate(45deg); }
 span.shuffled60.large { -webkit-transform: rotate(60deg); moz-transform: rotate(60deg); }
+span.shuffled60.medium { -webkit-transform: rotate(60deg); moz-transform: rotate(60deg); }
+span.shuffled60.small { -webkit-transform: rotate(60deg); moz-transform: rotate(60deg); }
 /* -------------------------------------- */
 /* 				Bam Tiles 				  */
 /* -------------------------------------- */

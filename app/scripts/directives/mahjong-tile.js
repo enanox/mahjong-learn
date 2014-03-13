@@ -9,6 +9,7 @@ angular.module('mahjongLearnAppApp').directive('mahjongTile', function(L10n) {
 		  var tile = JSON.parse(attrs.tile);
 		  var showName = attrs.showName === 'true';
 		  var size = attrs.size || '';
+		  var seatPosition = attrs.seat || '';
 
 		  if (showName) {
 			  element.find('span').text(tile[lang]);
@@ -35,7 +36,7 @@ angular.module('mahjongLearnAppApp').directive('mahjongTile', function(L10n) {
 		  };
 
 		  tileDesignSpan.addClass(suitClasses[tile.suit]);
-		  
+
 		  switch (tile.suit) {
 			  case 'H':
 				  tileDesignSpan.addClass(dragonClasses[tile.value]);
@@ -45,6 +46,23 @@ angular.module('mahjongLearnAppApp').directive('mahjongTile', function(L10n) {
 				  break;
 			  default:
 				  tileDesignSpan.addClass(tile.en);
+		  }
+
+		  if (seatPosition) {
+			  switch (seatPosition) {
+				  case '1':
+					  tileDesignSpan.addClass('shuffled-27');
+					  break;
+				  case '2':
+					  tileDesignSpan.addClass('shuffled24');
+					  break;
+				  case '3':
+					  tileDesignSpan.addClass('shuffled33');
+					  break;
+				  case '4':
+					  tileDesignSpan.addClass('shuffled-33');
+					  break;
+			  }
 		  }
 
 		  element.append(tileDesignSpan);

@@ -267,8 +267,24 @@ div.start-game-table {
 div.start-buttons {
 	width: 100%;
 	text-align: center;
-	padding: 20px 0px;
+	padding: 5px 0px;
+	margin-bottom: 35px;
+	float: left;
 }
+	.start-game-table.wall { height: 600px; }
+	.start-game-table.wall ul.seat1 { margin-top: 30px; position: relative; float: left; width: 50%; height: 50%;}
+	.start-game-table.wall ul.seat2 { margin-top: 30px; position: relative; float: right; width: 50%; height: 50%;}
+	.start-game-table.wall ul.seat3 { position: relative; float: left; width: 50%; height: 50%;}
+	.start-game-table.wall ul.seat4 { position: relative; float: right; width: 50%; height: 50%;}
+		.seat1 > li:not([class="seatName"]) { position: absolute; /*top: 75px;*/ }
+		.seat1 > li.seatName { position: absolute; top: 0px; left: -30px; }
+		.seat2 > li:not([class="seatName"]) { position: absolute; /*top: 75px; right: 0px*/}
+		.seat2 > li.seatName { position: absolute; top: 0px; right: -30px; }
+		.seat3 > li:not([class="seatName"]) { position: absolute; /*bottom: 60px */}
+		.seat3 > li.seatName { position: absolute; bottom: 0px; left: -30px; }
+		.seat4 > li:not([class="seatName"]) { position: absolute; /*right: 0px; bottom: 60px */}
+		.seat4 > li.seatName { position: absolute; bottom: 0px; right: -30px; }
+		
 /* === Animations === */
 .animate-enter, 
 .animate-leave
