@@ -1,21 +1,17 @@
 'use strict';
 
 angular.module('mahjongLearnAppApp')
-  .controller('TableCtrl', function ($scope, L10n) {
+  .controller('TableCtrl', function ($scope, L10n, $timeout) {
     
-    $scope.language = L10n.getBrowserLanguage();
-    $scope.continueVisible = true;
+  	$scope.language = L10n.getBrowserLanguage();
+    $scope.localize = L10n.setLanguage;
     
-    function getTextsForTable()  {
-      L10n.loadTextsForView()
-        .success(function(staticTexts) {
-		    $scope.texts = staticTexts.texts.Table;
-		    $scope.menu = staticTexts.texts.menu;
-		  })
-		.error(function(error) {
-		    $scope.error = 'Error loading texts ' + error.message;
-		  });
-    }
+    $scope.localizedTexts = L10n.getTextsForView(function(response) {
+    	$scope.texts = response.texts.Table;
+    	$scope.menu = response.texts.menu;
+    });
     
-    getTextsForTable();
+    $timeout(function() {
+	    $scope.continueVisible = true;
+    }, 1500);
   });

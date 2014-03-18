@@ -6,6 +6,13 @@ angular
         'StartCtrl',
         function($scope, $timeout, L10n, Tiles) {
 	        $scope.language = L10n.getBrowserLanguage();
+	        $scope.localize = L10n.setLanguage;
+	  	    
+	  	    $scope.localizedTexts = L10n.getTextsForView(function(response) {
+	  	    	$scope.texts = response.texts.Start;
+	  	    	$scope.menu = response.texts.menu;
+	  	    });
+	  	   
 	        $scope.continueVisible = false;
 	        $scope.areFlipped = true;
 	        $scope.myDebugMode = true;
@@ -20,17 +27,6 @@ angular
 		        $scope.scrambledTiles = Tiles.joinTiles(data);
 		        $scope.shuffle();
 	        });
-
-	        function getTextsForStart() {
-		        L10n.loadTextsForView().success(function(staticTexts) {
-			        $scope.texts = staticTexts.texts.Start;
-			        $scope.menu = staticTexts.texts.menu;
-		        }).error(function(error) {
-			        $scope.error = 'Error loading texts ' + error.message;
-		        });
-	        }
-
-	        getTextsForStart();
 
 	        $timeout(function() {
 		        $scope.continueVisible = true;
