@@ -2,21 +2,16 @@
 
 angular.module('mahjongLearnAppApp').controller('HomeCtrl',
     function($scope, $timeout, $interval, L10n) {
-	    $scope.awesomeThings = [ 'HTML5 Boilerplate', 'AngularJS', 'Karma' ];
-
+	 
 	    $scope.language = L10n.getBrowserLanguage();
+	    $scope.localize = L10n.setLanguage;
+	    
+	    $scope.localizedTexts = L10n.getTextsForView(function(response) {
+	    	$scope.texts = response.texts.Home;
+	    	$scope.menu = response.texts.menu;
+	    });
+	   
 	    $scope.continueVisible = false;
-
-	    function getTextsForHome() {
-		    L10n.loadTextsForView().success(function(staticTexts) {
-			    $scope.texts = staticTexts.texts.Home;
-			    $scope.menu = staticTexts.texts.menu;
-		    }).error(function(error) {
-			    $scope.error = 'Error loading texts ' + error.message;
-		    });
-	    }
-
-	    getTextsForHome();
 
 	    function init() {
 		    $interval(function() {

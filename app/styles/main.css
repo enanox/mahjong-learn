@@ -64,6 +64,15 @@ body {
 	background-size: 100%;
 	
 }
+header div.header-left {
+	float: left;
+}
+header div.header-right {
+	float: right;
+}
+article.content-page {
+	float: left;
+}
 div.title h1 {
 	font-size: 28px;
 	font-weight: bold;
@@ -88,6 +97,7 @@ div.home-legend {
 	margin-right: auto;
 }
 div.before-footer {
+	clear: both;
 	padding-top: 50px;
 	width: 50%;
 }
