@@ -2,11 +2,6 @@
 
 angular.module('mahjongLearnAppApp')
   .controller('TableCtrl', function ($scope, L10n) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
     
     $scope.language = L10n.getBrowserLanguage();
     $scope.continueVisible = true;

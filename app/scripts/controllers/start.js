@@ -5,17 +5,15 @@ angular
     .controller(
         'StartCtrl',
         function($scope, $timeout, L10n, Tiles) {
-	        $scope.awesomeThings = [ 'HTML5 Boilerplate', 'AngularJS', 'Karma' ];
-
 	        $scope.language = L10n.getBrowserLanguage();
 	        $scope.continueVisible = false;
 	        $scope.areFlipped = true;
 	        $scope.myDebugMode = true;
 	        $scope.scrambledIndex = 0;
 	        $scope.scrambledTiles = [];
-	        $scope.size = 'medium';	      
+	        $scope.size = 'medium';
 	        $scope.showFirstDescription = true;
-	        $scope.windsOrder = ['east', 'south', 'west', 'north'];
+	        $scope.windsOrder = [ 'east', 'south', 'west', 'north' ];
 
 	        Tiles.getResource().get(function(data) {
 		        $scope.tiles = data;
@@ -104,8 +102,11 @@ angular
 		            bottom : 280
 		          } ]
 		        };
-		        
-		        var secondRowBottomOffset = {small: 3, medium: 6};
+
+		        var secondRowBottomOffset = {
+		          small : 3,
+		          medium : 6
+		        };
 
 		        var style = offset[$scope.size][seatIndex];
 
@@ -116,14 +117,16 @@ angular
 		        var mount = 0, tileTopOffset = tileIndex === 0 ? 1 : tileIndex
 		            * tileSizeOffset[$scope.size], tileLeftOffset = tileIndex === 0 ? tileWidth
 		            : tileIndex * tileWidth, tileBottomOffset = tileIndex === 0 ? 1
-		            : tileIndex * (tileSizeOffset[$scope.size] + secondRowBottomOffset[$scope.size]);
+		            : tileIndex
+		                * (tileSizeOffset[$scope.size] + secondRowBottomOffset[$scope.size]);
 
 		        if (tileIndex >= 17) {
 			        mount++;
 			        tileTopOffset = (tileIndex % 17) * tileSizeOffset[$scope.size]
 			            + 25;
 			        tileBottomOffset = (tileIndex % 17)
-			            * (tileSizeOffset[$scope.size] + secondRowBottomOffset[$scope.size]) + 25;
+			            * (tileSizeOffset[$scope.size] + secondRowBottomOffset[$scope.size])
+			            + 25;
 		        }
 
 		        switch (seatIndex) {
@@ -184,42 +187,52 @@ angular
 		        }
 
 		        $scope.scrambledTiles = [];
-		      	$scope.showFirstDescription = false;
+		        $scope.showFirstDescription = false;
 		        $scope.showSecondDescription = true;
 	        };
-	        
-	        $scope.fullSeatDiceThrow = function()  {
-	        	var seatDiceThrow = [];
-	        	var dice = 0;
-	        	
-	        	for(var i = 1; i <= $scope.seatWalls.length; i++)  {
-	        		dice = 1 + Math.floor(Math.random() * 12);
-	        		console.log('seat ' + (i) + ' threw dice = ' + dice);
-	        		seatDiceThrow.push({seat: i, diceThrow: dice})
-	        	};
-	        	
-	        	seatDiceThrow.sort(function(seatA, seatB) {
-	        		return seatB.diceThrow - seatA.diceThrow;
-	        	});
-	        	
-	        	$scope.seats = [];
-	        	
-	        	console.log(seatDiceThrow)
-	        	for(var i = 1; i <= $scope.seatWalls.length; i++)  {
-	        		var eachWall = $scope.seatWalls[i - 1];
-	        		
-	        		console.log('seat' + i , eachWall)
-	        		for(var j = 0; j < seatDiceThrow.length; j++)  {
-	        			if(seatDiceThrow[j].seat == i)
-	        				$scope.seats.push({order: j, wallToDraw: $scope.seatWalls[i], wind: $scope.windsOrder[j]});
-	        			//$scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i], seatWind: $scope.windsOrder[i], order: j});
-	        		}
-	        		//if(seatDiceThrow[i].seat == i)	        		
-	        			//$scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i], seatWind: $scope.windsOrder[i]});
-	        		//else
-	        			//console.log(seatDiceThrow[i].seat);
-	        	}
-	        	
-	        	console.log($scope.seats)
+
+	        $scope.fullSeatDiceThrow = function() {
+		        var seatDiceThrow = [];
+		        var dice = 0;
+
+		        for ( var i = 1; i <= $scope.seatWalls.length; i++) {
+			        dice = 1 + Math.floor(Math.random() * 12);
+			        console.log('seat ' + (i) + ' threw dice = ' + dice);
+			        seatDiceThrow.push({
+			          seat : i,
+			          diceThrow : dice
+			        })
+		        }
+		        ;
+
+		        seatDiceThrow.sort(function(seatA, seatB) {
+			        return seatB.diceThrow - seatA.diceThrow;
+		        });
+
+		        $scope.seats = [];
+
+		        console.log(seatDiceThrow)
+		        for ( var i = 1; i <= $scope.seatWalls.length; i++) {
+			        var eachWall = $scope.seatWalls[i - 1];
+
+			        console.log('seat' + i, eachWall)
+			        for ( var j = 0; j < seatDiceThrow.length; j++) {
+				        if (seatDiceThrow[j].seat == i)
+					        $scope.seats.push({
+					          order : j,
+					          wallToDraw : $scope.seatWalls[i],
+					          wind : $scope.windsOrder[j]
+					        });
+				        // $scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i],
+								// seatWind: $scope.windsOrder[i], order: j});
+			        }
+			        // if(seatDiceThrow[i].seat == i)
+			        // $scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i],
+							// seatWind: $scope.windsOrder[i]});
+			        // else
+			        // console.log(seatDiceThrow[i].seat);
+		        }
+
+		        console.log($scope.seats)
 	        }
         });

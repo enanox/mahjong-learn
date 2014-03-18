@@ -2,8 +2,7 @@
 
 angular.module('mahjongLearnAppApp').controller('WelcomeCtrl',
     function($scope, $timeout, L10n) {
-	    $scope.awesomeThings = [ 'HTML5 Boilerplate', 'AngularJS', 'Karma' ];
-
+	    
 	    $scope.language = L10n.getBrowserLanguage();
 	    $scope.visible = false;
 

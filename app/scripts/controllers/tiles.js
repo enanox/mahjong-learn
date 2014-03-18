@@ -2,8 +2,6 @@
 
 angular.module('mahjongLearnAppApp').controller('TilesCtrl',
     function($scope, $timeout, L10n, Tiles) {
-	    $scope.awesomeThings = [ 'HTML5 Boilerplate', 'AngularJS', 'Karma' ];
-
 	    $scope.language = L10n.getBrowserLanguage();
 	    $scope.continueVisible = false;
 	    $scope.tiles = Tiles.getTiles();
