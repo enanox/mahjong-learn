@@ -214,12 +214,23 @@
 			"en": "Your seat",
 			"es": "Tu asiento"
 		  },
-		 "windsOrder": {
+		"windsOrder": {
 		    "east": {"en": "East", "es": "Este"},
 		    "south": {"en": "South", "es": "Sur"},
 		    "west": {"en": "West", "es": "Oeste"},
 		    "north": {"en": "North", "es": "Norte"}
-		 }
+		 	},
+		"orderLabel": {
+			 "en": "Order", "es": "Orden"
+		  },
+	  "drawOrderDescription": {
+			"en": "After the round order was set, the dealer throws another dice to select which tile set to draw to the players.. Afterwards, count the round walls following the established order to select the starting point.. ",
+			"es": "Luego que el orden de la ronda es determinado, el repartidor tira otro par de datos para seleccionar qué juego de piezas repartir a los jugadores.. Posteriormente, cuenta los muros de cada ronda siguiendo el orden establecido para seleccionar el punto de partida.. "
+		  },
+	  "drawAfterDiceDescription": {
+			"en": "Draw 6 pairs each to the players in the round sequence, and to complete the hand give the East player the upper tile of the first and the third following pairs and the 3 remaining pieces to the other players.. ",
+			"es": "Reparte 6 pares a cada jugador en la secuencia de la ronda, y para completar la mano, le da al jugador Este la pieza superior del primer y tercer par siguiente, y las 3 piezas restantes a los otros jugadores.. "
+		  }
 		}
 	}
 }

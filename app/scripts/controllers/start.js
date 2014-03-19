@@ -7,12 +7,12 @@ angular
         function($scope, $timeout, L10n, Tiles) {
 	        $scope.language = L10n.getBrowserLanguage();
 	        $scope.localize = L10n.setLanguage;
-	  	    
-	  	    $scope.localizedTexts = L10n.getTextsForView(function(response) {
-	  	    	$scope.texts = response.texts.Start;
-	  	    	$scope.menu = response.texts.menu;
-	  	    });
-	  	   
+
+	        $scope.localizedTexts = L10n.getTextsForView(function(response) {
+		        $scope.texts = response.texts.Start;
+		        $scope.menu = response.texts.menu;
+	        });
+
 	        $scope.continueVisible = false;
 	        $scope.areFlipped = true;
 	        $scope.myDebugMode = true;
@@ -63,7 +63,9 @@ angular
 		            height : 82
 		          }
 		        };
+
 		        var tileWidth = tileDimensions[$scope.size].width, tileHeight = tileDimensions[$scope.size].height;
+
 		        var tileSizeOffset = {
 		          small : 10,
 		          medium : 14,
@@ -106,10 +108,6 @@ angular
 
 		        var style = offset[$scope.size][seatIndex];
 
-		        function linearScaleX(x, incr) {
-			        return x * incr;
-		        }
-
 		        var mount = 0, tileTopOffset = tileIndex === 0 ? 1 : tileIndex
 		            * tileSizeOffset[$scope.size], tileLeftOffset = tileIndex === 0 ? tileWidth
 		            : tileIndex * tileWidth, tileBottomOffset = tileIndex === 0 ? 1
@@ -122,7 +120,7 @@ angular
 			            + 25;
 			        tileBottomOffset = (tileIndex % 17)
 			            * (tileSizeOffset[$scope.size] + secondRowBottomOffset[$scope.size])
-			            + 25;
+			            + 5;
 		        }
 
 		        switch (seatIndex) {
@@ -155,7 +153,7 @@ angular
 				            * tileWidth;
 				        break;
 			        default:
-				        console.log(seatIndex, 'NONO')
+				        console.log(seatIndex, 'Error')
 		        }
 
 		        for ( var positions in style) {
@@ -197,9 +195,8 @@ angular
 			        seatDiceThrow.push({
 			          seat : i,
 			          diceThrow : dice
-			        })
+			        });
 		        }
-		        ;
 
 		        seatDiceThrow.sort(function(seatA, seatB) {
 			        return seatB.diceThrow - seatA.diceThrow;
@@ -207,11 +204,9 @@ angular
 
 		        $scope.seats = [];
 
-		        console.log(seatDiceThrow)
 		        for ( var i = 1; i <= $scope.seatWalls.length; i++) {
 			        var eachWall = $scope.seatWalls[i - 1];
 
-			        console.log('seat' + i, eachWall)
 			        for ( var j = 0; j < seatDiceThrow.length; j++) {
 				        if (seatDiceThrow[j].seat == i)
 					        $scope.seats.push({
@@ -219,16 +214,15 @@ angular
 					          wallToDraw : $scope.seatWalls[i],
 					          wind : $scope.windsOrder[j]
 					        });
-				        // $scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i],
-								// seatWind: $scope.windsOrder[i], order: j});
 			        }
-			        // if(seatDiceThrow[i].seat == i)
-			        // $scope.seats.push({seat: i, wallToDraw: $scope.seatWalls[i],
-							// seatWind: $scope.windsOrder[i]});
-			        // else
-			        // console.log(seatDiceThrow[i].seat);
 		        }
+		        
+		        $scope.showSecondDescription = false;
+		        $scope.showThirdDescription = true;
+	        };
 
-		        console.log($scope.seats)
-	        }
+	        $scope.drawTiles = function() {
+	        	$scope.showThirdDescription = false;
+		        $scope.showFourthDescription = true;
+	        };
         });

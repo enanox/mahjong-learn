@@ -15,6 +15,6 @@ describe('Directive: mahjongTitle', function () {
   it('should make hidden element visible', inject(function ($compile) {
     element = angular.element('<div mahjong-title></div>');
     element = $compile(element)(scope);
-    expect(element.find('div').text()).toBe('Mahjong Learn');
+    expect(element.find('h1').text()).toBe('Mahjong Learn');
   }));
 });
