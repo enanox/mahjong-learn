@@ -14,7 +14,7 @@ angular
 	          restrict : 'A',
 	          link : function postLink(scope, element/* , attrs */) {
 		          var localizedTexts = scope.localized;
-		          var language = L10n.getBrowserLanguage();
+		          var language = scope.getLanguage();
 
 		          var decor = (localizedTexts !== null ? localizedTexts.decoration
 		              : '');
