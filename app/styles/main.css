@@ -149,6 +149,7 @@ div.tiles-description {
 	
 div.tiles-ordered {
 	width: 100%;
+	float: left;
 }
 	.tiles-ordered div.suits {
 		display: block;

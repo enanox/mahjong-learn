@@ -5,7 +5,7 @@ angular.module('mahjongLearnAppApp').directive('mahjongTile', function(L10n) {
 	  template : '<span></span>',
 	  restrict : 'A',
 	  link : function postLink(scope, element, attrs) {
-		  var lang = L10n.getBrowserLanguage();
+		  var lang = L10n.getLanguage(localStorage);
 		  var tile = JSON.parse(attrs.tile);
 		  var showName = attrs.showName === 'true';
 		  var size = attrs.size || '';

@@ -26,13 +26,16 @@ angular.module('mahjongLearnAppApp').service(
 		        return $resource('/static/texts.json').get(callback);
 	        };
 
+	        this.getLanguage = function(storageAPI) {
+		        return getLanguage() || (storageAPI ? storageAPI[prefixes.language] : null) || getBrowserLanguage();
+	        }
+
 	        function getLanguage() {
 		        console.log('from service L10n in rootscope', $rootScope.language);
 		        return $rootScope.language;
 	        }
 
 	        this.setLanguage = function(lang) {
-		        this.language = lang;
 		        $rootScope.$broadcast('languageChange', this.language);
 	        };
 
@@ -45,7 +48,7 @@ angular.module('mahjongLearnAppApp').service(
 	        $rootScope.getTextsFromStorage = function() {
 
 	        };
-	        this.lang = this.language;
+
 	        $rootScope.setLanguage = function(language, storageAPI, localSet) {
 		        var newOverallLanguage = language;
 
@@ -64,8 +67,10 @@ angular.module('mahjongLearnAppApp').service(
 	        };
 
 	        $rootScope.getLanguage = function(storageAPI) {
-		        console.log(this.language, 'LALALALALA', storageAPI, prefixes);
-		        return storageAPI.getItem(prefixes.language) || getLanguage();
+		        if (storageAPI) {
+			        return storageAPI.getItem(prefixes.language) || getLanguage();
+		        } else
+			        return getLanguage();
 	        };
 
         } ]);
