@@ -1,22 +1,21 @@
 'use strict';
 
 angular.module('mahjongLearnAppApp').controller('HomeCtrl',
-    function($scope, $timeout, $interval, L10n) {
+    function($scope, $timeout, $interval) {
 	 
-	    $scope.language = $scope.getLanguage(localStorage);
+	    $scope.language = $scope.getLanguage();
+	    $scope.setLanguage($scope.language);
 	    
 	    $scope.localize = function(lang) {
-	    	$scope.setLanguage(lang, localStorage);
+	    	$scope.setLanguage(lang);
 	    };
-	    
+		   
 	    $scope.$on('languageChange', function(a) {
-	    	$scope.language = $scope.getLanguage(localStorage);
+	    	$scope.language = $scope.getLanguage();
 	    });
 	    
-	    $scope.localizedTexts = L10n.getTextsForView(function(response) {
-	    	$scope.texts = response.texts.Home;
-	    	$scope.menu = response.texts.menu;
-	    });
+	    // Got the texts from NavbarCtrl
+	    $scope.texts = $scope.getTexts() ? $scope.getTexts().Home : null;
 	   
 	    $scope.continueVisible = false;
 

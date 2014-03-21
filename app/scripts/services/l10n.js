@@ -1,76 +1,116 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp').service(
-    'L10n',
-    [
-        '$rootScope',
-        '$resource',
-        function($rootScope, $resource) {
-	        // AngularJS will instantiate a singleton by calling "new" on this
-	        // function
+angular
+    .module('mahjongLearnAppApp')
+    .service(
+        'L10n',
+        [
+            '$rootScope',
+            '$resource',
+            function($rootScope, $resource) {
+	            // AngularJS will instantiate a singleton by calling "new" on this
+	            // function
 
-	        var prefixes = {
-	          language : 'mah.language',
-	          textKeys : 'mah.textKeys',
-	          textValues : 'mah.textValues'
-	        };
+	            // Local & private properties
+	            var prefixes = {
+	              language : 'mah.language',
+	              textKeys : 'mah.textKeys',
+	              textValues : 'mah.textValues'
+	            };
 
-	        function getBrowserLanguage() {
-		        return navigator.language.substring(0, 2)
-		            || navigator.userLanguage.substring(0, 2);
-	        }
+	            var storageAPI = localStorage;
+	            var texts = {};
+	            // Methods from the L10n API
+	            this.language = getBrowserLanguage();
 
-	        this.language = getBrowserLanguage();
+	            this.getTextsForView = function(callback) {
+		            return $resource('/static/texts.json').get(callback);
+	            };
 
-	        this.getTextsForView = function(callback) {
-		        return $resource('/static/texts.json').get(callback);
-	        };
+	            this.getLanguage = function() {
+		            return getLanguage()
+		                || (storageAPI ? storageAPI[prefixes.language] : null)
+		                || getBrowserLanguage();
+	            }
 
-	        this.getLanguage = function(storageAPI) {
-		        return getLanguage() || (storageAPI ? storageAPI[prefixes.language] : null) || getBrowserLanguage();
-	        }
+	            this.setLanguage = function(lang) {
+		            $rootScope.$broadcast('languageChange', this.language);
+	            };
 
-	        function getLanguage() {
-		        console.log('from service L10n in rootscope', $rootScope.language);
-		        return $rootScope.language;
-	        }
+	            this.setStorageAPI = function(api) {
+		            if (api) {
+			            storageAPI = api;
+		            }
+	            };
 
-	        this.setLanguage = function(lang) {
-		        $rootScope.$broadcast('languageChange', this.language);
-	        };
+	            this.getTexts = function() {
+		            return (storageAPI && storageAPI[prefixes.textKeys] ? JSON
+		                .parse(storageAPI[prefixes.textKeys]) : null)
+		                || texts;
+	            };
+	            // Helper private methods
+	            function getLanguage() {
+		            return $rootScope.language;
+	            }
 
-	        $rootScope.pushTextsToStorage = function(textsObject, storageAPI) {
-		        /*
-						 * if (L1.language) storageAPI.setItem()
-						 */
-	        };
+	            function getBrowserLanguage() {
+		            return navigator.language.substring(0, 2)
+		                || navigator.userLanguage.substring(0, 2);
+	            }
 
-	        $rootScope.getTextsFromStorage = function() {
+	            function retrieveTextsFromFile() {
+		            return $resource('/static/texts.json')
+		                .get(
+		                    function(staticTexts) {
+			                    texts = staticTexts.texts;
+			                    $rootScope.texts = texts;
+			                    storageAPI[prefixes.textKeys] = JSON.stringify(texts);
+		                    },
+		                    function(error) {
+			                    throw new ReferenceError(
+			                        'The texts for language couldn\'t be loaded by the application.');
+		                    });
+	            }
 
-	        };
+	            function getTexts() {
+		            return $rootScope.texts;
+	            }
 
-	        $rootScope.setLanguage = function(language, storageAPI, localSet) {
-		        var newOverallLanguage = language;
+	            // General methods for the $rootScope
+	            $rootScope.getTexts = function() {
+		            if (!getTexts() || !storageAPI.getItem(prefixes.textKeys)) {
 
-		        if (newOverallLanguage) {
-			        newOverallLanguage = language;
-		        } else if (getLanguage()) {
-			        newOverallLanguage = getLanguage();
-		        } else {
-			        // Fallback using browser language
-			        newOverallLanguage = getBrowserLanguage();
-		        }
+			            retrieveTextsFromFile().$promise['finally'](function() {
+				            $rootScope.$broadcast('textsLoaded');
+			            });
+		            } else {
+			            return getTexts()
+			                || (storageAPI && storageAPI[prefixes.textKeys] ? JSON
+			                    .parse(storageAPI.getItem(prefixes.textKeys)) : null);
+		            }
+	            };
 
-		        storageAPI.setItem(prefixes.language, newOverallLanguage);
-		        $rootScope.language = newOverallLanguage;
-		        $rootScope.$broadcast('languageChange', 'I dont know');
-	        };
+	            $rootScope.setLanguage = function(language) {
+		            var newOverallLanguage = language;
 
-	        $rootScope.getLanguage = function(storageAPI) {
-		        if (storageAPI) {
-			        return storageAPI.getItem(prefixes.language) || getLanguage();
-		        } else
-			        return getLanguage();
-	        };
+		            if (newOverallLanguage) {
+			            newOverallLanguage = language;
+		            } else if (getLanguage()) {
+			            newOverallLanguage = getLanguage();
+		            } else {
+			            // Fallback using browser language
+			            newOverallLanguage = getBrowserLanguage();
+		            }
 
-        } ]);
+		            storageAPI.setItem(prefixes.language, newOverallLanguage);
+		            $rootScope.language = newOverallLanguage;
+		            $rootScope.$broadcast('languageChange', 'I dont know');
+	            };
+
+	            $rootScope.getLanguage = function() {
+		            return (storageAPI ? storageAPI.getItem(prefixes.language)
+		                : null)
+		                || getLanguage() || getBrowserLanguage();
+	            };
+
+            } ]);

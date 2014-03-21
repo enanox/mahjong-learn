@@ -5,8 +5,8 @@ angular.module('mahjongLearnAppApp')
     return {
       restrict: 'A',
       replace: true,
-      template: '<nav class="menu">'+
-      '<ul>'+
+      template: '<nav class="menu navbar navbar-default">'+
+      '<ul class="nav navbar-nav">'+
       '<li ng-repeat="o in menu"><a href="{{o.text.link}}">{{o.text[language]}}</a></li>'+
       '</ul>'+
       '</nav>',

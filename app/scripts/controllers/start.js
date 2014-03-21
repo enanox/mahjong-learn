@@ -4,21 +4,19 @@ angular
     .module('mahjongLearnAppApp')
     .controller(
         'StartCtrl',
-        function($scope, $timeout, L10n, Tiles) {
+        function($scope, $timeout, Tiles) {
         	$scope.language = $scope.getLanguage(localStorage);
     	    
     	    $scope.localize = function(lang) {
-    	    	$scope.setLanguage(lang, localStorage);
+    	    	$scope.setLanguage(lang);
     	    };
     	    
     	    $scope.$on('languageChange', function(a) {
     	    	$scope.language = $scope.getLanguage(localStorage);
     	    });
     	    
-	        $scope.localizedTexts = L10n.getTextsForView(function(response) {
-		        $scope.texts = response.texts.Start;
-		        $scope.menu = response.texts.menu;
-	        });
+    	    // Got the texts from NavbarCtrl
+    	    $scope.texts = $scope.getTexts() ? $scope.getTexts().Start : null;
 
 	        $scope.continueVisible = false;
 	        $scope.areFlipped = true;

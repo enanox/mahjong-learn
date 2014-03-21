@@ -64,6 +64,9 @@ body {
 	background-size: 100%;
 	
 }
+.header-navbar {
+	padding: 0px 20px;	
+}
 header div.header-left {
 	float: left;
 }
