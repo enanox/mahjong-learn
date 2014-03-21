@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mahjongLearnAppApp')
-  .controller('NavbarCtrl', function ($scope) {
+  .controller('NavbarCtrl', function ($scope, L10n) {
   	$scope.language = $scope.getLanguage();
     $scope.setLanguage($scope.language);
     $scope.getTexts();
