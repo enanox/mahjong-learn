@@ -39,8 +39,8 @@
 	<div class="start-game-table wall" data-ng-show="seatWalls.length">
 		<div class="start-buttons" data-ng-show="myDebugMode">
 		<button data-ng-click="toggleFlip()">Flip</button>
-		<button data-ng-click="fullSeatDiceThrow()" data-ng-hide="!showSecondDescription">Throw Dice</button>
-		<button data-ng-click="drawDiceThrow()" data-ng-show="showThirdDescription && !showFourthDescription">Throw Dice for Order</button>
+		<button data-ng-click="fullSeatDiceThrow()" data-ng-hide="!showSecondDescription">Rol Dice</button>
+		<button data-ng-click="drawDiceThrow()" data-ng-show="showThirdDescription && !showFourthDescription">Roll Dice for Order</button>
 		<button data-ng-click="drawTiles()" data-ng-show="showFourthDescription">Draw Tiles</button>
 		</div>
 		<ul data-ng-repeat="seat in seatWalls" class="{{ 'seat' + ($index + 1)}}">
