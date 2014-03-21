@@ -195,7 +195,7 @@ angular
 		        var dice = 0;
 
 		        for ( var i = 1; i <= $scope.seatWalls.length; i++) {
-			        dice = 1 + Math.floor(Math.random() * 12);
+			        dice = 2 + Math.floor(Math.random() * 12);
 			        console.log('seat ' + (i) + ' threw dice = ' + dice);
 			        seatDiceThrow.push({
 			          seat : i,
@@ -215,8 +215,9 @@ angular
 			        for ( var j = 0; j < seatDiceThrow.length; j++) {
 				        if (seatDiceThrow[j].seat == i)
 					        $scope.seats.push({
+					        	seat	: seatDiceThrow[j].seat,	
 					          order : j,
-					          wallToDraw : $scope.seatWalls[i],
+					          wallToDraw : $scope.seatWalls[i - 1],
 					          wind : $scope.windsOrder[j]
 					        });
 			        }
@@ -226,6 +227,25 @@ angular
 		        $scope.showThirdDescription = true;
 	        };
 
+	        $scope.drawDiceThrow = function() {
+	        	var dice = 2 + Math.floor(Math.random() * 12);
+	        	$scope.diceToDraw = dice;
+	        	
+	        	var seatOrdered = $scope.seats.slice();
+	        	seatOrdered.sort(function(a,b) {
+	        		return a.order - b.order;
+	        	});
+	        	
+	        	var randomSeatSelected = dice % 4 > 0 ? (dice % 4 - 1) : 0;
+	        	
+	        	$scope.startingSeatToDrawFrom = seatOrdered[randomSeatSelected];
+	        	$scope.startingWallToDraw = $scope.startingSeatToDrawFrom.wallToDraw;
+	        	
+	        	$scope.showThirdDescription = false;
+	        	$scope.showFourthDescription = true;
+	        	
+	        };
+	        	        
 	        $scope.drawTiles = function() {
 	        	$scope.showThirdDescription = false;
 		        $scope.showFourthDescription = true;

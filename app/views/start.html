@@ -14,10 +14,15 @@
 			  data-ng-repeat="description in texts.drawOrderDescription[language].split('. ')">
 			  {{ description }}
 		</span>
+		<span class="text-only" data-ng-show="showFourthDescription">
+			{{ texts.currentDrawOrder.first[language] }} <strong>{{diceToDraw}}</strong>{{ texts.currentDrawOrder.second[language] }} <strong>{{texts.windsOrder[startingSeatToDrawFrom.wind][language] }}</strong>
+			{{ texts.currentDrawOrder.third[language] }} <strong>{{diceToDraw | postfix}}</strong>
+			{{ texts.currentDrawOrder.fourth[language] }}
+		</span>
 		<span class="text-only" data-ng-show="showFourthDescription"
 			  data-ng-repeat="description in texts.drawAfterDiceDescription[language].split('. ')">
 			  {{ description }}
-		</span>
+		</span>		
 	</div>
 	<div class="start-game-table" data-ng-show="scrambledTiles.length">
 		<div class="start-buttons" data-ng-show="myDebugMode">
@@ -34,8 +39,9 @@
 	<div class="start-game-table wall" data-ng-show="seatWalls.length">
 		<div class="start-buttons" data-ng-show="myDebugMode">
 		<button data-ng-click="toggleFlip()">Flip</button>
-		<button data-ng-click="fullSeatDiceThrow()">Throw Dice</button>
-		<button data-ng-click="drawTiles()">Draw Tiles</button>
+		<button data-ng-click="fullSeatDiceThrow()" data-ng-hide="!showSecondDescription">Throw Dice</button>
+		<button data-ng-click="drawDiceThrow()" data-ng-show="showThirdDescription && !showFourthDescription">Throw Dice for Order</button>
+		<button data-ng-click="drawTiles()" data-ng-show="showFourthDescription">Draw Tiles</button>
 		</div>
 		<ul data-ng-repeat="seat in seatWalls" class="{{ 'seat' + ($index + 1)}}">
 			<li class="seatName">
