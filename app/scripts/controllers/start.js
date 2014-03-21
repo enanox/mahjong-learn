@@ -4,7 +4,7 @@ angular
     .module('mahjongLearnAppApp')
     .controller(
         'StartCtrl',
-        function($scope, $timeout, Tiles) {
+        function($scope, $timeout, Tiles, L10n) {
         	$scope.language = $scope.getLanguage(localStorage);
     	    
     	    $scope.localize = function(lang) {

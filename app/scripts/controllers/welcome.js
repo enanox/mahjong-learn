@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mahjongLearnAppApp').controller('WelcomeCtrl',
-    function($scope, $timeout) {
+    function($scope, $timeout, L10n) {
 
 	    $scope.language = $scope.getLanguage(localStorage);
 	    

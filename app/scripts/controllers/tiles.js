@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mahjongLearnAppApp').controller('TilesCtrl',
-    function($scope, $timeout, Tiles) {
+    function($scope, $timeout, Tiles, L10n) {
 	    $scope.continueVisible = false;
 
 	    $scope.language = $scope.getLanguage(localStorage);
