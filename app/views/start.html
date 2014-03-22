@@ -39,11 +39,11 @@
 	<div class="start-game-table wall" data-ng-show="seatWalls.length">
 		<div class="start-buttons" data-ng-show="myDebugMode">
 		<button data-ng-click="toggleFlip()">Flip</button>
-		<button data-ng-click="fullSeatDiceThrow()" data-ng-hide="!showSecondDescription">Rol Dice</button>
+		<button data-ng-click="fullSeatDiceThrow()" data-ng-hide="!showSecondDescription">Roll Dice</button>
 		<button data-ng-click="drawDiceThrow()" data-ng-show="showThirdDescription && !showFourthDescription">Roll Dice for Order</button>
 		<button data-ng-click="drawTiles()" data-ng-show="showFourthDescription">Draw Tiles</button>
 		</div>
-		<ul data-ng-repeat="seat in seatWalls" class="{{ 'seat' + ($index + 1)}}">
+		<ul data-ng-repeat="seat in seatWalls" class="{{ 'seat' + ($index + 1) }}">
 			<li class="seatName">
 				<span data-ng-show="($index + 1) == 3" data-ng-class="{'yourSeat': ($index + 1) == 2}">{{ texts.yourSeat[language] }}</span>				
 				<span class="seatIndicator" data-ng-show="seats.length">{{texts.windsOrder[seats[$index].wind][language]}}</span><br/>
