@@ -1,1 +1,68 @@
-<p>This is the contact view.</p>
+<article class="content-page">
+	<h1>{{ texts.title[language] }}</h1>
+
+	<section class="contact-description">
+		<span class="text-only" data-ng-repeat="description in texts.descriptionLittle[language].split('. ')">{{ description }}</span>
+	</section>
+	<section class="other-contact-methods">
+		<div class="col-sm-{{ 12 / texts.otherContactMethods.length}} text-center" data-ng-repeat="contact in texts.otherContactMethods">
+			<a href="{{contact.link}}">
+				<span class="icon {{contact.icon}}"></span>
+				<span class="text">{{contact[language]}}</span>
+			</a>
+		</div>
+	</section>
+	<section class="contact-form">
+		<form name="form" class="form-horizontal">
+			<div class="form-group">
+				<label for="name" class="control-label col-sm-2">{{ texts.form.name[language] }} (*)</label>
+				<div class="col-sm-6">
+					<input type="text" name="name" class="form-control" required
+						data-ng-minlength="2" data-ng-model="contact.name">
+				</div>
+				<div class="col-sm-4"
+					data-ng-show="form.name.$dirty && form.name.$invalid">
+					<div data-ng-show="form.name.$error.required">{{ texts.form.name.error.required[language] }}</div>
+					<div data-ng-show="form.name.$error.minlength">{{ texts.form.name.error.minlength[language] }}</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="email" class="control-label col-sm-2">{{ texts.form.email[language] }} (*)</label>
+				<div class="col-sm-6">
+					<input type="email" name="email" class="form-control" required  data-ng-model="contact.email">
+				</div>
+				<div class="col-sm-4"
+					data-ng-show="form.email.$dirty && form.email.$invalid">
+					<div data-ng-show="form.email.$error.required">{{ texts.form.email.error.required[language] }}</div>
+					<div data-ng-show="form.email.$error.email">{{ texts.form.email.error.email[language] }}</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="subject" class="control-label col-sm-2">{{ texts.form.subject[language] }} (*)</label>
+				<div class="col-sm-6">
+					<input type="text" name="subject" class="form-control" required
+						data-ng-minlength="3" data-ng-model="contact.subject">
+				</div>
+				<div class="col-sm-4"
+					data-ng-show="form.subject.$dirty && form.subject.$invalid">
+					<div data-ng-show="form.subject.$error.required">{{ texts.form.subject.error.required[language] }}</div>
+					<div data-ng-show="form.subject.$error.minlength">{{ texts.form.subject.error.minlength[language] }}</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="message" class="control-label col-sm-2">{{ texts.form.message[language] }}</label>
+				<div class="col-sm-10">
+					<textarea name="message" class="form-control" data-ng-model="contact.message"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-6">
+					<input type="reset" class="form-control btn btn-sm" value="{{ texts.form.reset[language]}}">
+				</div>				
+				<div class="col-xs-6">
+					<input type="submit" class="form-control btn btn-sm" value="{{ texts.form.send[language]}}">
+				</div>				
+			</div>
+		</form>
+	</section>
+</article>

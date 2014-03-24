@@ -253,6 +253,59 @@
 				"es": " ficha de dicho muro. "
 				}
 			}
+		},
+	"Contact": {
+		"title": {
+			"en":"Contact us",
+			"es":"Contáctanos"
+			},
+		"descriptionLittle": {
+			"en": "Thanks for reaching here! We hope you are enjoying and learning how to play Mahjong Riichi as much as we do making this tutorial.. As you may noticed, this site is under development and some features could appear unfinished or wrong, so feel free to contact us to point out this issues, recommending some improvements that you'd like, or simply just say Hi, through GitHub or the contact form below.. Have a nice day!",
+			"es": "¡Gracias por llegar hasta aquí! Esperamos que estés disfrutando y aprendiendo cómo jugar Mahjong Riichi tanto como nosotros haciendo este tutorial.. Como puedes haberte dado cuenta, este sitio continúa en desarrollo y algunas características pueden parecer incompletas o incorrectas, siéntete libre de contactarnos para indicarnos estos errores, recomendar alguna mejora que quisieras, o simplemente saludarnos, a través de GitHub o el formulario de contacto más abajo.. ¡Que tengas un buen día!"
+			},
+		"otherContactMethods": [
+			{ "en": "enanox in GitHub", "es": "enanox en GitHub", "link": "http://github.com/enanox", "icon": "repo-github"},
+			{ "en": "Raise an issue", "es": "Subir una incidencia", "link": "http://github.com/enanox/mahjong-learn/issues", "icon": "issue-github"},
+			{ "en": "Pull request", "es": "Peticiones pull", "link": "http://github.com/enanox/mahjong-learn/pulls", "icon": "pull-request"}
+			],
+		"form": {
+			"name": {
+				"en": "Name",
+				"es": "Nombre",
+				"error": {
+					"required": { "en": "Your name is required.", "es": "Tu nombre es obligatorio."},
+					"minlength": { "en": "Your name must be greater than 2 characters long.", "es": "Tu nombre debe tener más de 2 caracteres."}
+					}
+				},
+			"email": {
+				"en": "e-Mail",
+				"es": "e-Mail",
+				"error": {
+					"required": { "en": "Your e-mail is required.", "es": "Tu e-mail es obligatorio."},
+					"email": { "en": "Wrong e-mail format.", "es": "Formato de e-mail incorrecto."}
+					}
+				},
+			"subject": {
+				"en": "Subject",
+				"es": "Asunto",
+				"error": {
+					"required": { "en": "The subject is required.", "es": "El asunto es obligatorio."},
+					"minlength": { "en": "The subject must be greater than 3 characters long", "es": "El asunto debe tener más de 3 caracteres."}
+					}
+				},
+			"message": {
+				"en": "Message",
+				"es": "Comentario"
+				},
+			"send": {
+				"en": "Send",
+				"es": "Enviar"
+				},
+			"reset": {
+				"en": "Reset",
+				"es": "Borrar"
+				}
+			}
 		}
 	}
 }
