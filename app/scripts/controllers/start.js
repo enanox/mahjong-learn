@@ -266,10 +266,10 @@ angular
 		        console.log('before entering', 'DICE ROLLED: ' + $scope.diceToDraw)
 		        do {
 
-			        if ($scope.seats[i].seat === $scope.startingSeatToDrawFrom.seat) {
-			        	console.log('ARRAY LENGTH: ', $scope.seats[i].wallToDraw.length);
+			        if (seatOrdered[i].seat === $scope.startingSeatToDrawFrom.seat) {
+			        	console.log('ARRAY LENGTH: ', seatOrdered[i].wallToDraw.length);
 				        var j1 = $scope.diceToDraw - 1, j2 = $scope.diceToDraw
-				            + Math.floor($scope.seats[i].wallToDraw.length / 2) - 2, toPlayerHand = [], k = 0, tileDrawn = [];
+				            + Math.floor(seatOrdered[i].wallToDraw.length / 2) - 2, toPlayerHand = [], k = 0, tileDrawn = [];
 				        var bottomTile = {}, topTile = {};
 				        toPlayerHand.push($scope.seats[i]);
 
@@ -283,21 +283,21 @@ angular
 					        if (toPlayerHand[k].handTiles.length === 12) {
 						        k++;
 						        j1 = 0;
-						        j2 = Math.floor($scope.seats[i].wallToDraw.length / 2) - 1;
-						        toPlayerHand.push($scope.seats[i]);
+						        j2 = Math.floor(seatOrdered[i].wallToDraw.length / 2) - 1;
+						        toPlayerHand.push(seatOrdered[i]);
 					        } else if(toPlayerHand[k].wallToDraw.length - 12 === $scope.diceToDraw)  {
 					        	i++;
 					        	k++;
-					        	toPlayerHand.push($scope.seats[i]);
-					        } else if($scope.seats[i].wallToDraw[j2] === undefined)  {
+					        	toPlayerHand.push(seatOrdered[i]);
+					        } else if(seatOrdered[i].wallToDraw[j2] === undefined)  {
 					        	k++;
 					        	i++;
 					        	j1 = 0; 
-					        	j2 = Math.floor($scope.seats[i].wallToDraw[j2].length / 2) - 1;
+					        	j2 = Math.floor(seatOrdered[i].wallToDraw[j2].length / 2) - 1;
 					        }
 					        
-					        bottomTile = $scope.seats[i].wallToDraw.splice(j1, 1)[0];
-					        topTile = $scope.seats[i].wallToDraw.splice(j2, 1)[0];
+					        bottomTile = seatOrdered[i].wallToDraw.splice(j1, 1)[0];
+					        topTile = seatOrdered[i].wallToDraw.splice(j2, 1)[0];
 
 					        //j += 1;
 					        j1 += 1;
@@ -306,23 +306,30 @@ angular
 					        toPlayerHand[k].handTiles.push(bottomTile);
 					        toPlayerHand[k].handTiles.push(topTile);
 					       console.log(toPlayerHand[k].handTiles)
-					        if (j2 === $scope.seats[i].wallToDraw.length && !completed
-					            && i < $scope.seats.length) {
+					        if (j2 === seatOrdered[i].wallToDraw.length && !completed
+					            && i < seatOrdered.length) {
 						        j1 = 0;
 						        j2 = 16;
 						        i++;
-					        } else if (i >= $scope.seats.length) {
+					        } else if (i >= seatOrdered.length) {
 						        break;
 					        }
-				        } while (i < $scope.seats.length
-				            && j2 < $scope.seats[i].wallToDraw.length
-				            && $scope.seats[i].wallToDraw.length !== 0);
+				        } while (i < seatOrdered.length
+				            && j2 < seatOrdered[i].wallToDraw.length
+				            && seatOrdered[i].wallToDraw.length !== 0);
 			        } else {
 				        i++;
 			        }
-		        } while (i < $scope.seats.length);
+		        } while (i < seatOrdered.length);
 
 		        console.log('FINAL SEATS', toPlayerHand, $scope.seats)
+		        if(toPlayerHand.length <= $scope.seats.length)  {
+			        for(var i = 0; i < $scope.seats.length; i++)  {			        	
+			        	$scope.seats[i] = toPlayerHand[i];
+			        }
+		        }
+		        
+		        console.log($scope.seats);
 		        $scope.showThirdDescription = false;
 		        $scope.showFourthDescription = true;
 	        };
