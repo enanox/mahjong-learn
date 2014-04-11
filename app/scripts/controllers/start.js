@@ -285,16 +285,29 @@ angular
 		        		if(j === traversed.length)  {
 		        			console.log('girs')
 		        			i = seatOrdered.length;
-		        		} else if(j1 + 2 >= seatOrdered[i].wallToDraw.length || j2 + 2 >= seatOrdered[i].wallToDraw.length) {
-		        			console.log('is greater than')
-		        			if(i + 1 === seatOrdered.length && !traversed[0].done)  {
-		        				i = 0;
+		        		} else if(j1 + 2 > seatOrdered[i].wallToDraw.length || j2 + 2 >= seatOrdered[i].wallToDraw.length) {
+		        			console.log('is greater than', i, seatOrdered.length)
+		        			if(i + 1 >= seatOrdered.length)  {
+		        				console.log('WHICH ARE TRAVERSABLE?',traversed)
+		        				console.log('AND SO...',i, seatOrdered[i])  
+		        				if(!traversed[0].done)  {
+		        					i = 0;
+		        					
+		        					
+		        				} else if(!traversed[i].done){
+		        					
+		        				}
+		        				
+		        				j1 = 0;
+			        			j2 = Math.floor(seatOrdered[i].wallToDraw.length / 2) - 1;
 		        			} else {
 		        				i++;
+		        				
+		        				j1 = 0;
+			        			j2 = Math.floor(seatOrdered[i].wallToDraw.length / 2) - 1;
 		        			}
-		        					        			
-		        			j1 = 0;
-		        			j2 = Math.floor(seatOrdered[i].wallToDraw.length / 2) - 1;
+		        			   			
+		        			
 		        		} else if(traversed[j].hand.length === 12)  {
 		        			console.log('hand ' + j + ' full')
 		        			traversed[j].done = true;
@@ -341,7 +354,7 @@ angular
 		        //}
 		        
 		        console.log($scope.seats);
-		        $scope.showThirdDescription = false;
-		        $scope.showFourthDescription = true;
+		        $scope.showFourthDescription = false;
+		        $scope.showFifthDescription = true;
 	        };
         });
