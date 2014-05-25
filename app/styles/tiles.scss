@@ -3,28 +3,31 @@
 /* -------------------------------------- */
 /* 				Tile sizes      		  */
 /* -------------------------------------- */
-span.small {
+@mixin tiles() {
 	background-image: url(../images/tiles.jpg);
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
 	display: inline-block;
+}
+@mixin small-tiles() {
+	
+}
+
+span.small {
+	@include tiles;
 	width: 20px;
 	height: 27.3px;
 	border-radius: 3px;
 	background-size: 336px 336px;
 }
 span.medium {
-	background-image: url(../images/tiles.jpg);
-	background-repeat: no-repeat;	
-	display: inline-block;
+	@include tiles;
 	width: 30px;
 	height: 41px;
 	border-radius: 4px;
 	background-size: 505px 505px;
 }
 span.large {
-	background-image: url(../images/tiles.jpg);
-	background-repeat: no-repeat;	
-	display: inline-block;
+	@include tiles;
 	width: 60px;
 	height: 82px;
 	border-radius: 7px;

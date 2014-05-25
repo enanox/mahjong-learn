@@ -25,6 +25,7 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
+    
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
@@ -38,10 +39,18 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-      styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
-      },
+      //styles: {
+      //  files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+      //  tasks: ['newer:sass', 'newer:copy:styles']
+      //},
+      //styles: {
+      //  files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+      //  tasks: ['newer:copy:styles', 'autoprefixer']
+      //},
+      sass: {
+      	files: '<%= yeoman.app %>/styles/{,*/}*.{scss,sass}',
+      	tasks: ['sass']
+    	},
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -147,9 +156,7 @@ module.exports = function (grunt) {
       }
     },
 
-
-
-
+    
 
     // Renames files for browser caching purposes
     rev: {
@@ -325,10 +332,21 @@ module.exports = function (grunt) {
         configFile: 'karma-e2e.conf.js',
         proxies: {'/': 'http://localhost:9001/'}
       }
+    },
+    
+    sass: {    	
+    	dist: {
+	    	options: {
+	    		style: 'expanded'
+	    	},
+	      files: {'<%= yeoman.app %>/styles/style.css': '<%= yeoman.app %>/styles/app.scss'},
+	  	}
     }
   });
 
-
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -354,7 +372,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma'
+    'karma:unit'
   ]);
   
   grunt.registerTask('test:e2e', [
