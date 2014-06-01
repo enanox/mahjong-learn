@@ -8,59 +8,62 @@
 	background-repeat: no-repeat;	
 	display: inline-block;
 }
+@mixin backTiles() {
+	background-image: url(../images/tile-back.png) !important;
+	background-repeat: no-repeat;
+	display: inline-block;	
+}
 @mixin small-tiles() {
-	
 }
-
-span.small {
-	@include tiles;
-	width: 20px;
-	height: 27.3px;
-	border-radius: 3px;
-	background-size: 336px 336px;
-}
-span.medium {
-	@include tiles;
-	width: 30px;
-	height: 41px;
-	border-radius: 4px;
-	background-size: 505px 505px;
-}
-span.large {
-	@include tiles;
-	width: 60px;
-	height: 82px;
-	border-radius: 7px;
-	background-size: auto auto;
+span {
+	.small {
+		@include tiles;
+		width: 20px;
+		height: 27.3px;
+		border-radius: 3px;
+		background-size: 336px 336px;
+	}
+	.medium {
+		@include tiles;
+		width: 30px;
+		height: 41px;
+		border-radius: 4px;
+		background-size: 505px 505px;
+	}
+	large {
+		@include tiles;
+		width: 60px;
+		height: 82px;
+		border-radius: 7px;
+		background-size: auto auto;
+	}
 }
 .back > span {
 	background-position: 0px 0px !important;
-}
-.back > span.small {
-	background-image: url(../images/tile-back.png) !important;
-	background-repeat: no-repeat;
-	background-size: 20px 27.3px;
-	display: inline-block;
-	width: 20px;
-	height: 27.3px;
-	border-radius: 3px;
-}
-.back > span.medium {
-	background-image: url(../images/tile-back.png) !important;
-	background-repeat: no-repeat;	
-	background-size: 30px 41px;
-	display: inline-block;
-	width: 30px;
-	height: 41px;
-	border-radius: 4px;
-}
-.back > span.large {
-	background-image: url(../images/tile-back.png) !important;
-	background-repeat: no-repeat;	
-	display: inline-block;
-	width: 60px;
-	height: 82px;
-	border-radius: 7px;
+	
+	&.large {
+		@include backTiles;
+		background-size: 20px 27.3px;
+		width: 20px;
+		height: 27.3px;
+		border-radius: 3px;
+	}
+	
+	$.medium {
+		@include backTiles;	
+		background-size: 30px 41px;
+		width: 30px;
+		height: 41px;
+		border-radius: 4px;
+	}
+	
+	&.small {
+		@include backTiles;
+		background-size: 20px 27.3px;
+		width: 20px;
+		height: 27.3px;
+		border-radius: 3px;
+	}
 }
 /* -------------------------------------- */
 /* 			  Rotated Tiles 			  */
