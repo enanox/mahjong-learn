@@ -49,7 +49,7 @@ module.exports = function (grunt) {
       //},
       sass: {
       	files: '<%= yeoman.app %>/styles/{,*/}*.{scss,sass}',
-      	tasks: ['sass']
+      	tasks: ['sass', 'newer:copy:styles']
     	},
       gruntfile: {
         files: ['Gruntfile.js']
