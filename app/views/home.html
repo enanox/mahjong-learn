@@ -2,13 +2,13 @@
 	<h1>{{ texts.title[language] }}</h1>
 	
 	<section>
-		<div class="home-questions" data-ng-animate="hide" data-ng-repeat="q in texts.questions" data-ng-hide="visible">
+		<div class="home-questions" data-ng-repeat="q in texts.questions" data-ng-hide="visible">
 			{{ q.text[language] }}
 		</div>
-		<div class="home-before-legend" data-ng-show="visibleBefLegend" data-ng-animate="show">
+		<div class="home-before-legend" data-ng-show="visibleBefLegend" data-ng-animate="animate">
 			{{ texts.beforeLegend[language]  }}
 		</div>
-		<div class="home-legend" data-ng-show="visibleLegend" data-ng-animate="show">
+		<div class="home-legend" data-ng-show="visibleLegend">
 			{{ texts.legend[language] }}
 		</div>
 	</section>

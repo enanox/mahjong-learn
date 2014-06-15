@@ -4,7 +4,9 @@ angular.module('mahjongLearnAppApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'ngAnimate',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider
