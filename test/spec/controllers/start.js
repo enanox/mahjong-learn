@@ -3,7 +3,7 @@
 describe('Controller: StartCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('mahjongLearnAppApp'));
+  beforeEach(module('mahjongLearnApp'));
 
   var StartCtrl,
     scope;

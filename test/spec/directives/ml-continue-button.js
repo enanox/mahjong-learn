@@ -1,9 +1,9 @@
 'use strict';
 
-describe('Directive: mahjongScrambled', function () {
+describe('Directive: mlContinueButton', function () {
 
   // load the directive's module
-  beforeEach(module('mahjongLearnAppApp'));
+  beforeEach(module('mahjongLearnApp'));
 
   var element,
     scope;
@@ -13,8 +13,8 @@ describe('Directive: mahjongScrambled', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<mahjong-scrambled></mahjong-scrambled>');
+    element = angular.element('<div ml-continue-button></div>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the mahjongScrambled directive');
+    expect(element.children().children().text()).toBe('{{ texts.continue[language] }}');
   }));
 });

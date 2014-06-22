@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp')
+angular.module('mahjongLearnApp')
   .controller('TableCtrl', function ($scope, $timeout, L10n) {
     
   	$scope.language = $scope.getLanguage(localStorage);

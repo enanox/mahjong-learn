@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp').controller('AboutCtrl', function($scope) {
+angular.module('mahjongLearnApp').controller('AboutCtrl', function($scope) {
 
 });

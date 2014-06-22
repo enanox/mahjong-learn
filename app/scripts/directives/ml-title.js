@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp').directive(
-    'mahjongTitle',
+angular.module('mahjongLearnApp').directive(
+    'mlTitle',
     function() {
 	    return {
 	      restrict : 'A',

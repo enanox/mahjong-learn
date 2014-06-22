@@ -1,6 +1,6 @@
 'use strict';
 
-describe('MahjongLearnApp App', function() {
+describe('MahjongLearn App', function() {
 	
 	describe('Home page', function() {
 	

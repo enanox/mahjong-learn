@@ -1,9 +1,9 @@
 'use strict';
 
-describe('Directive: mahjongTitle', function () {
+describe('Directive: mlTitle', function () {
 
   // load the directive's module
-  beforeEach(module('mahjongLearnAppApp'));
+  beforeEach(module('mahjongLearnApp'));
 
   var element,
     scope;
@@ -13,7 +13,7 @@ describe('Directive: mahjongTitle', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<div mahjong-title></div>');
+    element = angular.element('<div ml-title></div>');
     element = $compile(element)(scope);
     expect(element.find('h1').text()).toBe('Mahjong Learn');
   }));

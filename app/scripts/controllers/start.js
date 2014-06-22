@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('mahjongLearnAppApp')
+    .module('mahjongLearnApp')
     .controller(
         'StartCtrl',
         function($scope, $timeout, Tiles, L10n) {

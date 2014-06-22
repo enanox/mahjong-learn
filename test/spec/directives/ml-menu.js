@@ -1,9 +1,9 @@
 'use strict';
 
-describe('Directive: mahjongMenu', function () {
+describe('Directive: mlMenu', function () {
 
   // load the directive's module
-  beforeEach(module('mahjongLearnAppApp'));
+  beforeEach(module('mahjongLearnApp'));
 
   var element,
     scope;
@@ -13,7 +13,7 @@ describe('Directive: mahjongMenu', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<div mahjong-menu></div>');
+    element = angular.element('<div ml-menu></div>');
     element = $compile(element)(scope);
     
     expect(element.attr('class')).toBe('menu navbar navbar-default ng-scope');

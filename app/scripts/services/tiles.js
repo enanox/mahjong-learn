@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('mahjongLearnAppApp')
+    .module('mahjongLearnApp')
     .factory(
         'Tiles',
         function(L10n, $resource) {

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body ng-app="mahjongLearnAppApp">
+  <body ng-app="mahjongLearnApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -52,6 +52,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        
         <script src="scripts/controllers/table.js"></script>
         <script src="scripts/controllers/welcome.js"></script>
         <script src="scripts/controllers/tiles.js"></script>
@@ -62,18 +63,21 @@
         <script src="scripts/controllers/contact.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/home.js"></script>
-        <script src="scripts/services/l10n.js"></script>
-        <script src="scripts/directives/mahjong-menu.js"></script>
-        <script src="scripts/directives/mahjong-title.js"></script>
-        <script src="scripts/directives/mahjong-continue-button.js"></script>
-        <script src="scripts/directives/mahjong-complement-image.js"></script>
-        <script src="scripts/services/Tiles.js"></script>
-        <script src="scripts/directives/mahjong-tile.js"></script>
-        <script src="scripts/directives/mahjong-scrambled.js"></script>
-        <script src="scripts/filters/shuffle-start.js"></script>
-        <script src="scripts/controllers/navbar.js"></script>
-        <script src="scripts/filters/postfix.js"></script>
+        <script src="scripts/controllers/navbar.js"></script>        
         <script src="scripts/controllers/footer.js"></script>
+        
+        <script src="scripts/services/l10n.js"></script>
+        <script src="scripts/services/Tiles.js"></script>
+        
+        <script src="scripts/directives/ml-menu.js"></script>
+        <script src="scripts/directives/ml-title.js"></script>
+        <script src="scripts/directives/ml-continue-button.js"></script>
+        <script src="scripts/directives/ml-complement-image.js"></script>        
+        <script src="scripts/directives/ml-tile.js"></script>
+        <script src="scripts/directives/ml-scrambled.js"></script>
+        
+        <script src="scripts/filters/shuffle-start.js"></script>
+        <script src="scripts/filters/postfix.js"></script>
         <!-- endbuild -->
 </body>
 </html>

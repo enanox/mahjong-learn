@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp').controller('TilesCtrl',
+angular.module('mahjongLearnApp').controller('TilesCtrl',
     function($scope, $timeout, Tiles, L10n) {
 	    $scope.continueVisible = false;
 

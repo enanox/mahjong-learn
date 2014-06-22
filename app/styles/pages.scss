@@ -10,7 +10,7 @@ body {
     max-width: 730px;
   }
 }
-[ng-app="mahjongLearnAppApp"] {
+[ng-app="mahjongLearnApp"] {
 	background: url('../images/mat.jpg') 0px -100px no-repeat;
 	background-size: 100%;
 	
@@ -59,9 +59,7 @@ div.before-footer {
 div.legend-texts {
 	padding: 20px 0;
 }
-div.history-texts {
-	padding: 30px 0px;
-}
+
 div.equipment-texts  {
 	display: block;
 	padding: 20px 0px;
@@ -81,16 +79,6 @@ div.equipment-texts span.decoration {
 	background-repeat: no-repeat
 }
 
-span.centered {
-	display: inline-block;
-	height: 139px;
-	width: 50%;
-	padding-top: 30px;
-}
-
-div.history-texts span.centered {
-	padding: 0;
-}
 
 /* === Tiles Page === */
 div.tiles-description {

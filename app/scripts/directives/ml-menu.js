@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp')
-  .directive('mahjongMenu', function () {
+angular.module('mahjongLearnApp')
+  .directive('mlMenu', function () {
     return {
       restrict: 'A',
       replace: true,

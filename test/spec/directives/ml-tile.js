@@ -1,9 +1,9 @@
 'use strict';
 
-describe('Directive: mahjongTile', function () {
+describe('Directive: mlTile', function () {
 
   // load the directive's module
-  beforeEach(module('mahjongLearnAppApp'));
+  beforeEach(module('mahjongLearnApp'));
 
   var element,
     scope;
@@ -15,7 +15,7 @@ describe('Directive: mahjongTile', function () {
   it('should append child spans with tile name and with tile image', inject(function ($compile) {
 	var objectTile = {'en': 'one', 'es': 'uno', 'value': 1, 'suit': 'B'};
 	
-    element = angular.element('<div mahjong-tile></div>');
+    element = angular.element('<div ml-tile></div>');
     element.attr('data-tile',JSON.stringify(objectTile));
     element = $compile(element)(scope);
     

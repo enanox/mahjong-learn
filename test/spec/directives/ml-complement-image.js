@@ -1,9 +1,9 @@
 'use strict';
 
-describe('Directive: mahjongComplementImage', function () {
+describe('Directive: mlComplementImage', function () {
 
   // load the directive's module
-  beforeEach(module('mahjongLearnAppApp'));
+  beforeEach(module('mahjongLearnApp'));
 
   var element,
     scope;
@@ -14,7 +14,7 @@ describe('Directive: mahjongComplementImage', function () {
 
   it('should make hidden element visible', inject(function ($compile) {
   	var localized = {'en': 'Text', 'es': 'Texto', 'decoration': '' };
-    element = angular.element('<div mahjong-complement-image></div>');
+    element = angular.element('<div ml-complement-image></div>');
     element.attr('data-localized',JSON.stringify(localized));
     element = $compile(element)(scope);
     

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp')
-  .directive('mahjongContinueButton', function () {
+angular.module('mahjongLearnApp')
+  .directive('mlContinueButton', function () {
     return {
       template: '<div class="before-footer">'+
       '<div class="continue" data-ng-show="continueVisible">'+

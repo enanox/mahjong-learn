@@ -3,7 +3,7 @@
 describe('Filter: postfix', function () {
 
   // load the filter's module
-  beforeEach(module('mahjongLearnAppApp'));
+  beforeEach(module('mahjongLearnApp'));
 
   // initialize a new instance of the filter before each test
   var postfix;

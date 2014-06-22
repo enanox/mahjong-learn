@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('mahjongLearnAppApp')
+    .module('mahjongLearnApp')
     .service(
         'L10n',
         [

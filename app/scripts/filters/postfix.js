@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp').filter(
+angular.module('mahjongLearnApp').filter(
     'postfix',
     function(L10n) {
 	    return function(input) {

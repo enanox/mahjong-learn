@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp').directive('mahjongTile', function(L10n) {
+angular.module('mahjongLearnApp').directive('mlTile', function(L10n) {
 	return {
 	  template : '<span></span>',
 	  restrict : 'A',

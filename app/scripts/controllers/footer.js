@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mahjongLearnAppApp')
+angular.module('mahjongLearnApp')
   .controller('FooterCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
