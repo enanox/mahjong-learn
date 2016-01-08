@@ -4,3 +4,5 @@ dist
 .sass-cache
 app/bower_components
 /.settings
+app/styles/style.css
+app/styles/style.css.map

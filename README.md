@@ -12,17 +12,15 @@ Requirements for deploy
 * Node.js (any OS-specific distribution, preferred 0.10 or better)
 * Grunt
 * Bower
+* Ruby
 * Web browser
 
 Run development version
 --------------------------------
-1. Install `npm`
-2. Install dependencies `npm install` (use `sudo` if you are running a *nix OS)
-3. Install Grunt CLI `npm install grunt-cli -g`
-4. Install Grunt `npm install grunt -g`
-5. Install Bower `npm install bower -g`
-6. `bower install`
-7. Run with `grunt serve`
+1. Install `sass` - `gem install sass`  (use `sudo` if you are running a *nix OS)
+2. Install Grunt and Bower - `npm install grunt grunt-cli bower -g`
+3. Install dependencies - `npm install && bower install`
+4. Run with `grunt serve`
 
-### Licensing
-GNU GPL v2 
+## Licensing
+MIT 

@@ -329,7 +329,7 @@ module.exports = function(grunt) {
 			return grunt.task.run([ 'build', 'connect:dist:keepalive' ]);
 		}
 
-		grunt.task.run([ 'clean:server', 'bower-install', 'concurrent:server',
+		grunt.task.run([ 'clean:server', 'bower-install', 'sass', 'concurrent:server',
 		    'autoprefixer', 'connect:livereload', 'watch' ]);
 	});
 
