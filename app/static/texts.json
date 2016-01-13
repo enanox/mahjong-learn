@@ -9,13 +9,13 @@
 		{"text": {
 			"en":"About",
 			"es":"Acerca",
-			"link": "#/about"
+			"link": "/about"
 			}
 		},
 		{"text": {
 			"en":"Contact us",
 			"es":"Contacto",
-			"link": "#/contact"
+			"link": "/contact"
 			}
 		}
 	],
@@ -61,7 +61,7 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/welcome"
+			"link": "/welcome"
 			}
 		},
 	"Welcome": {
@@ -72,7 +72,7 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/table"
+			"link": "/table"
 			},		
 		"legendTexts": [
 			{"text": {
@@ -117,7 +117,7 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/tiles"
+			"link": "/tiles"
 			},
 		"equipmentTitle": {
 			"en": "Equipment",
@@ -169,7 +169,7 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/start"
+			"link": "/start"
 			},
 		"suitsDescription": {
 			"en": "The set of mahjong tiles consist of 136 pieces.. There are three different suits numbered from 1 to 9, which are called simple tiles.. They are: ",
@@ -200,7 +200,7 @@
 		"continue": {
 			"en": "Continue",
 			"es": "Continuar",
-			"link": "#/yaku"
+			"link": "/yaku"
 			},
 		"titlePreparation": {
 			"en": "Preparation",
@@ -264,9 +264,9 @@
 			"es": "¡Gracias por llegar hasta aquí! Esperamos que estés disfrutando y aprendiendo cómo jugar Mahjong Riichi tanto como nosotros haciendo este tutorial.. Como puedes haberte dado cuenta, este sitio continúa en desarrollo y algunas características pueden parecer incompletas o incorrectas, siéntete libre de contactarnos para indicarnos estos errores, recomendar alguna mejora que quisieras, o simplemente saludarnos, a través de GitHub o el formulario de contacto más abajo.. ¡Que tengas un buen día!"
 			},
 		"otherContactMethods": [
-			{ "en": "enanox in GitHub", "es": "enanox en GitHub", "link": "http://github.com/enanox", "icon": "repo-github"},
-			{ "en": "Raise an issue", "es": "Subir una incidencia", "link": "http://github.com/enanox/mahjong-learn/issues", "icon": "issue-github"},
-			{ "en": "Pull request", "es": "Peticiones pull", "link": "http://github.com/enanox/mahjong-learn/pulls", "icon": "pull-request"}
+			{ "en": "enanox in GitHub", "es": "enanox en GitHub", "link": "http://github.com/enanox", "icon": "octicon-mark-github"},
+			{ "en": "Raise an issue", "es": "Subir una incidencia", "link": "http://github.com/enanox/mahjong-learn/issues", "icon": "octicon-issue-opened"},
+			{ "en": "Pull request", "es": "Peticiones pull", "link": "http://github.com/enanox/mahjong-learn/pulls", "icon": "octicon-git-pull-request"}
 			],
 		"form": {
 			"name": {

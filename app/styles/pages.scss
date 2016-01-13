@@ -11,8 +11,8 @@ body {
   }
 }
 [ng-app="mahjongLearnApp"] {
-	background: url('../images/mat.jpg') 0px -100px no-repeat;
-	background-size: 100%;
+	/*background: url('../images/mat.jpg') 0px -100px no-repeat;
+	background-size: 100%;*/
 	
 }
 .header-navbar {
@@ -128,7 +128,7 @@ div.tiles-ordered {
 				padding: 0;
 				text-align: center;
 			}
-			.suit-pieces ul li span:first-child {
+			.suit-pieces ul li span.tile-name {
 				float: left;
 				display: inline-block;
 				width: 100%;
@@ -169,7 +169,7 @@ div.tiles-ordered {
 				display: inline;
 				float: left;
 			}
-			.honor-pieces ul li span:first-child {
+			.honor-pieces ul li span.tile-name {
 				float: left;
 				display: inline-block;
 				width: 100%;
@@ -257,14 +257,15 @@ div.start-buttons {
 }
 	.other-contact-methods a { }
 	.other-contact-methods span.icon {
-		width: 50px;
-		height: 50px;
 		display: inline-block;
 		background-repeat: no-repeat;
+        color: #000;
+        &.octicon {            
+            font-size: 64px;
+            text-align: center;
+            padding-bottom: 5px;
+        }        
 	}
-		.icon.repo-github {}
-		.icon.issue-github {}
-		.icon.pull-request {}
 		
 	.other-contact-methods span.text {
 		display: block;

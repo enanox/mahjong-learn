@@ -2,12 +2,12 @@
 	<h1>{{ texts.title[language] }}</h1>
 	
 	<section>
-		<div class="legend-texts" data-ng-repeat="l in texts.legendTexts">
+		<div class="legend-texts" ng-repeat="l in texts.legendTexts">
 			<span>{{ l.text[language] }}</span>
 		</div>
-		<div class="history-texts" data-ng-repeat="h in texts.historyTexts" data-ng-show="visible" data-ml-complement-image data-localized="h.text">
-			<span data-ng-transclude></span>
+		<div class="history-texts" ng-repeat="h in texts.historyTexts" ng-show="visible" ml-complement-image localized="h.text">
+			<span ng-transclude></span>
 		</div>
 	</section>
 </article>
-<div data-ml-continue-button></div>
+<ml-continue-button continue-visible="continueVisible" texts="texts.continue"></ml-continue-button>

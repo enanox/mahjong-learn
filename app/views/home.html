@@ -2,18 +2,18 @@
 	<h1>{{ texts.title[language] }}</h1>
 	
 	<section>
-		<div class="home-questions" data-ng-repeat="q in texts.questions" data-ng-hide="visible">
+		<div class="home-questions" ng-repeat="q in texts.questions" ng-hide="visible">
 			{{ q.text[language] }}
 		</div>
-		<div class="home-before-legend" data-ng-show="visibleBefLegend">
+		<div class="home-before-legend" ng-show="visibleBefLegend">
 			{{ texts.beforeLegend[language]  }}
 		</div>
-		<div class="home-legend" data-ng-show="visibleLegend">
+		<div class="home-legend" ng-show="visibleLegend">
 			{{ texts.legend[language] }}
 		</div>
 	</section>
-	<section data-ng-social="">
+	<section ng-social="">
 		
 	</section>
 </article>
-<div data-ml-continue-button></div>
+<ml-continue-button continue-visible="continueVisible" texts="texts.continue"></ml-continue-button>

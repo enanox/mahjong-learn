@@ -1,0 +1,4 @@
+<li ng-class="{ 'back': mlTile.areFlipped, 'isDragon': mlTile.isDragon, 'isWind': mlTile.isWind, 'isDora': mlTile.isDora, 'seat1': mlTile.seat == 0, 'seat2': mlTile.seat == 1, 'seat3': mlTile.seat == 2, 'seat4': mlTile.seat == 3 }">
+    <span ng-if="mlTile.showName" class="tile-name">{{mlTile.tile[mlTile.lang]}}</span>
+    <span class="{{ mlTile.getClasses() }}"></span>
+</li>

@@ -16,7 +16,7 @@ describe('Directive: mlTile', function () {
 	var objectTile = {'en': 'one', 'es': 'uno', 'value': 1, 'suit': 'B'};
 	
     element = angular.element('<div ml-tile></div>');
-    element.attr('data-tile',JSON.stringify(objectTile));
+    element.attr('tile',JSON.stringify(objectTile));
     element = $compile(element)(scope);
     
     expect(element.find('span').eq(0).hasClass('')).toBe(true);

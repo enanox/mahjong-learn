@@ -2,61 +2,58 @@
 	<h2>{{ texts.title[language] }}</h2>
 	
 	<div class="start-description">
-		<span class="text-only" data-ng-show="showFirstDescription"
-			  data-ng-repeat="description in texts.preparationDescription[language].split('. ')">
+		<span class="text-only" ng-show="showFirstDescription"
+			  ng-repeat="description in texts.preparationDescription[language].split('. ')">
 			  {{ description }}
 		</span>
-		<span class="text-only" data-ng-show="showSecondDescription"
-			  data-ng-repeat="description in texts.diceDescription[language].split('. ')">
+		<span class="text-only" ng-show="showSecondDescription"
+			  ng-repeat="description in texts.diceDescription[language].split('. ')">
 			  {{ description }}
 		</span>
-		<span class="text-only" data-ng-show="showThirdDescription"
-			  data-ng-repeat="description in texts.drawOrderDescription[language].split('. ')">
+		<span class="text-only" ng-show="showThirdDescription"
+			  ng-repeat="description in texts.drawOrderDescription[language].split('. ')">
 			  {{ description }}
 		</span>
-		<span class="text-only" data-ng-show="showFourthDescription">
+		<span class="text-only" ng-show="showFourthDescription">
 			{{ texts.currentDrawOrder.first[language] }} <strong>{{diceToDraw}}</strong>{{ texts.currentDrawOrder.second[language] }} <strong>{{texts.windsOrder[startingSeatToDrawFrom.wind][language] }}</strong>
 			{{ texts.currentDrawOrder.third[language] }} <strong>{{diceToDraw | postfix}}</strong>
 			{{ texts.currentDrawOrder.fourth[language] }}
 		</span>
-		<span class="text-only" data-ng-show="showFourthDescription"
-			  data-ng-repeat="description in texts.drawAfterDiceDescription[language].split('. ')">
+		<span class="text-only" ng-show="showFourthDescription"
+			  ng-repeat="description in texts.drawAfterDiceDescription[language].split('. ')">
 			  {{ description }}
 		</span>		
 	</div>
-	<div class="start-game-table" data-ng-show="scrambledTiles.length">
-		<div class="start-buttons" data-ng-show="myDebugMode">
-		<button data-ng-click="toggleFlip()">Flip</button>
-		<button data-ng-click="shuffle(true)">Shuffle</button>
-		<button data-ng-click="order()">Order wall</button>
+	<div class="start-game-table" ng-show="scrambledTiles.length">
+		<div class="start-buttons" ng-show="myDebugMode">
+		<button ng-click="toggleFlip()">Flip</button>
+		<button ng-click="shuffle(true)">Shuffle</button>
+		<button ng-click="order()">Order wall</button>
 		</div>
 		<ul>
-			<li data-ng-repeat="tile in scrambledTiles track by $index | shuffleStart"
-				data-ml-tile data-tile="{{ tile.name }}" data-size="medium"
-				data-ng-class="{'back': areFlipped, 'isDora': tile.attr.dora}"></li>
+			<ml-tile ng-repeat="tile in scrambledTiles track by $index | shuffleStart"
+				tile="tile.name" size="medium"
+				are-flipped="areFlipped" is-dora="tile.attr.dora"></ml-tile>
 		</ul>
 	</div>
-	<div class="start-game-table wall" data-ng-show="seatWalls.length">
-		<div class="start-buttons" data-ng-show="myDebugMode">
-		<button data-ng-click="toggleFlip()">Flip</button>
-		<button data-ng-click="fullSeatDiceThrow()" data-ng-hide="!showSecondDescription">Roll Dice</button>
-		<button data-ng-click="drawDiceThrow()" data-ng-show="showThirdDescription && !showFourthDescription">Roll Dice for Order</button>
-		<button data-ng-click="drawTiles()" data-ng-show="showFourthDescription">Draw Tiles</button>
+	<div class="start-game-table wall" ng-show="seatWalls.length">
+		<div class="start-buttons" ng-show="myDebugMode">
+		<button ng-click="toggleFlip()">Flip</button>
+		<button ng-click="fullSeatDiceThrow()" ng-hide="!showSecondDescription">Roll Dice</button>
+		<button ng-click="drawDiceThrow()" ng-show="showThirdDescription && !showFourthDescription">Roll Dice for Order</button>
+		<button ng-click="drawTiles()" ng-show="showFourthDescription">Draw Tiles</button>
 		</div>
-		<ul data-ng-repeat="seat in seatWalls" class="{{ 'seat' + ($index + 1) }}">
+		<ul ng-repeat="seat in seatWalls" class="{{ 'seat' + ($index + 1) }}">
 			<li class="seatName">
-				<span data-ng-show="($index + 1) == 3" data-ng-class="{'yourSeat': ($index + 1) == 2}">{{ texts.yourSeat[language] }}</span>				
-				<span class="seatIndicator" data-ng-show="seats.length">{{texts.windsOrder[seats[$index].wind][language]}}</span><br/>
-				<span data-ng-show="seats.length">{{texts.orderLabel[language]}}: </span><span data-ng-show="seats.length">{{seats[$index].order + 1}}</span>
+				<span ng-show="($index + 1) == 3" ng-class="{'yourSeat': ($index + 1) == 2}">{{ texts.yourSeat[language] }}</span>				
+				<span class="seatIndicator" ng-show="seats.length">{{texts.windsOrder[seats[$index].wind][language]}}</span><br/>
+				<span ng-show="seats.length">{{texts.orderLabel[language]}}: </span><span ng-show="seats.length">{{seats[$index].order + 1}}</span>
 			</li>
-			<li data-ng-repeat="tile in seat track by $index" data-ml-tile data-tile="{{ tile.name }}" 
-				data-size="{{size}}" data-seat="{{ $parent.$index + 1}}"
-				data-ng-class="{'back': areFlipped, 'isDora': tile.attr.dora, 
-								'seat1': $parent.$index == 0, 'seat2': $parent.$index == 1,
-								'seat3': $parent.$index == 2, 'seat4': $parent.$index == 3}"
-				data-ng-style="getTilesWallPosition($parent.$index, $index)"></li>
+			<ml-tile ng-repeat="tile in seat track by $index" tile="tile.name" 
+				size="medium" seat="$parent.$index" are-flipped="areFlipped" is-dora="tile.attr.dora"
+				ng-style="getTilesWallPosition($parent.$index, $index)"></ml-tile>
 		</ul>
 	</div>
 	<div style="clear: both"></div>
 </article>
-<div data-ml-continue-button></div>
+<ml-continue-button continue-visible="continueVisible" texts="texts.continue"></ml-continue-button>

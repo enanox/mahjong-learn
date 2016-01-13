@@ -1,22 +1,33 @@
 'use strict';
 
-angular.module('mahjongLearnApp').directive('mlTile', function(L10n) {
+angular.module('mahjongLearnApp').directive('mlTile', function($rootScope, L10n) {
 	return {
-	  template : '<span></span>',
-	  restrict : 'A',
-	  link : function postLink(scope, element, attrs) {
-		  var lang = L10n.getLanguage(localStorage);
-		  var tile = JSON.parse(attrs.tile);
-		  var showName = attrs.showName === 'true';
-		  var size = attrs.size || '';
-		  var seatPosition = attrs.seat || '';
-
-		  if (showName) {
-			  element.find('span').text(tile[lang]);
-		  }
-
-		  var tileDesignSpan = angular.element('<span></span>').addClass(size);
-		  var suitClasses = {
+      templateUrl: "views/partials/ml-tile.html",
+	  require: ["mlTile"],
+      scope: {},
+      bindToController: {
+        areFlipped: "=",
+        isDora: "=",
+        isDragon: "=",
+        isWind: "=",
+        seat: "=",
+        size: "@",
+        showName: "=",
+        tile: "=",        
+      },
+      controllerAs: "mlTile",
+	  restrict : 'EA',
+      controller: function() {},
+	  link : function postLink(scope, element, attrs, controllers) {          
+          var tileCtrl = controllers[0];
+          tileCtrl.lang = L10n.getLanguage(localStorage);
+		  var tile = tileCtrl.tile;
+		  var size = tileCtrl.size || '';
+		  var seatPosition = tileCtrl.seat || '';
+          var tileStyles = [];
+          tileStyles.push(size);
+		  
+          var suitClasses = {
 		    'B' : 'bam',
 		    'C' : 'char',
 		    'D' : 'circle',
@@ -35,37 +46,42 @@ angular.module('mahjongLearnApp').directive('mlTile', function(L10n) {
 		    'N' : 'north-wind'
 		  };
 
-		  tileDesignSpan.addClass(suitClasses[tile.suit]);
-
+          tileStyles.push(suitClasses[tile.suit]);
 		  switch (tile.suit) {
 			  case 'H':
-				  tileDesignSpan.addClass(dragonClasses[tile.value]);
+                  tileStyles.push(dragonClasses[tile.value]);
 				  break;
 			  case 'W':
-				  tileDesignSpan.addClass(windClasses[tile.value]);
+                  tileStyles.push(windClasses[tile.value]);
 				  break;
 			  default:
-				  tileDesignSpan.addClass(tile.en);
+                  tileStyles.push(tile.en);
 		  }
 
 		  if (seatPosition) {
 			  switch (seatPosition) {
 				  case '1':
-					  tileDesignSpan.addClass('shuffled-27');
+                      tileStyles.push('shuffled-27');
 					  break;
 				  case '2':
-					  tileDesignSpan.addClass('shuffled24');
+                      tileStyles.push('shuffled24');
 					  break;
 				  case '3':
-					  tileDesignSpan.addClass('shuffled33');
+                      tileStyles.push('shuffled33');
 					  break;
 				  case '4':
-					  tileDesignSpan.addClass('shuffled-33');
+                      tileStyles.push('shuffled-33');
 					  break;
 			  }
 		  }
+          
+          $rootScope.$on("languageChange", function () {
+            tileCtrl.lang = L10n.getLanguage(localStorage);    
+          });
 
-		  element.append(tileDesignSpan);
+          tileCtrl.getClasses = function (){
+              return tileStyles.join(" ");    
+          };
 	  }
 	};
 });
