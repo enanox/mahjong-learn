@@ -30,14 +30,14 @@ module.exports = function(grunt) {
 	      watch : {
 	        js : {
 	          files : [ '<%= yeoman.app %>/scripts/{,*/}*.js' ],
-	          tasks : [ 'newer:jshint:all' ],
+	          tasks : [ /*'newer:jshint:all'*/ ],
 	          options : {
 		          livereload : true
 	          }
 	        },
 	        jsTest : {
 	          files : [ 'test/spec/{,*/}*.js' ],
-	          tasks : [ 'newer:jshint:test', 'karma' ]
+	          tasks : [ /*'newer:jshint:test'*/, 'karma' ]
 	        },
 	        // styles: {
 	        // files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
@@ -352,5 +352,5 @@ module.exports = function(grunt) {
 	    'concurrent:dist', 'autoprefixer', 'concat', 'ngmin', 'copy:dist',
 	    'cdnify', 'cssmin', 'uglify', 'rev', 'usemin', 'htmlmin' ]);
 
-	grunt.registerTask('default', [ 'newer:jshint', 'test', 'build' ]);
+	grunt.registerTask('default', [ /*'newer:jshint',*/ 'test', 'build' ]);
 };
